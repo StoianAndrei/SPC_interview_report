@@ -1,11 +1,11 @@
 # =============================================================================
 # global.R  --  loaded once when the Shiny app (or Plumber API) starts
+# -----------------------------------------------------------------------------
+# Loads only the ENGINE dependencies, so the validation engine / Plumber API /
+# smoke tests run without the heavier UI packages (shiny/DT/leaflet/plotly),
+# which app.R loads itself.
 # =============================================================================
 suppressPackageStartupMessages({
-  library(shiny)
-  library(DT)
-  library(leaflet)
-  library(plotly)
   library(jsonlite)
 })
 

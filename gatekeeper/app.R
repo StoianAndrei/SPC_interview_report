@@ -5,6 +5,12 @@
 # flags workspace (fix & re-validate) -> conditional forward to TUFMAN 2.
 # Run:  shiny::runApp("gatekeeper")
 # =============================================================================
+suppressPackageStartupMessages({
+  library(shiny)
+  library(DT)
+  library(leaflet)
+  library(plotly)
+})
 source("global.R")
 
 # ---- UI ---------------------------------------------------------------------

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tufman2_Longline_Trip_Level",
+  "type": "object",
+  "required": [
+    "trip_id",
+    "license",
+    "vessel_identification",
+    "vessel_captain",
+    "sp_code_target",
+    "depart_port",
+    "depart_datetime",
+    "ll_activities"
+  ],
+  "properties": {
+    "trip_id": { "type": "string", "description": "Unique trip identifier (e.g., Vessel ID + Departure Date)." },
+    "license": { "type": "string", "description": "National or regional license/permit number." },
+    "vessel_identification": {
+      "type": "object",
+      "required": ["wcpfc_vid"],
+      "properties": {
+        "wcpfc_vid": { "type": "integer", "description": "WCPFC Vessel Identifier." }
+      }
+    },
+    "vessel_captain": { "type": "string", "description": "Name of the vessel captain." },
+    "trip_number": { "type": "integer", "minimum": 1 },
+    "sp_code_target": { "type": "string", "pattern": "^[A-Z]{3}$" },
+    "depart_port": { "type": "string", "pattern": "^[A-Z]{5}$" },
+    "unload_port": { "type": ["string", "null"], "pattern": "^[A-Z]{5}$" },
+    "depart_datetime": { "type": "string", "format": "date-time" },
+    "unload_datetime": { "type": ["string", "null"], "format": "date-time" },
+    "is_incremental": { "type": "boolean", "default": false },
+    "ll_activities": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ll_activity" }
+    }
+  },
+  "definitions": {
+    "ll_activity": {
+      "type": "object",
+      "required": ["activity_id", "act_datetime", "lat", "lon"],
+      "properties": {
+        "activity_id": {
+          "type": "integer",
+          "enum": [1, 3, 4, 5, 6, 18],
+          "description": "1=Fishing Set, 3=Transit, 4=Breakdown, 5=Bad Weather, 6=In Port, 18=Transshipping/Bunkering."
+        },
+        "act_datetime": { "type": "string", "format": "date-time" },
+        "lat": { "type": "string", "pattern": "^[+-][0-9]{4}\\.[0-9]{3}$", "description": "ISO 6709 +/-DDMM.MMM" },
+        "lon": { "type": "string", "pattern": "^[+-][0-9]{5}\\.[0-9]{3}$", "description": "ISO 6709 +/-DDDMM.MMM" },
+        "hk_btwn_flt": { "type": "integer", "minimum": 0 },
+        "hooks": { "type": "integer", "minimum": 0 },
+        "ll_catches": { "type": "array", "items": { "$ref": "#/definitions/ll_catch" } }
+      },
+      "if": { "properties": { "activity_id": { "const": 1 } } },
+      "then": { "required": ["hk_btwn_flt", "hooks", "ll_catches"] }
+    },
+    "ll_catch": {
+      "type": "object",
+      "required": ["sp_code_ret"],
+      "properties": {
+        "sp_code_ret": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "sp_ret_no": { "type": "integer", "minimum": 0 },
+        "sp_ret_mt": { "type": "number", "minimum": 0.0 },
+        "sp_disc_no": { "type": "integer", "minimum": 0 }
+      },
+      "anyOf": [
+        { "required": ["sp_ret_no"] },
+        { "required": ["sp_disc_no"] }
+      ]
+    }
+  }
+}

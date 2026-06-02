@@ -1,0 +1,22 @@
+{
+  "trip_id": "DIRTY20260603",
+  "license": "FM26-LL-BAD",
+  "vessel_identification": { "wcpfc_vid": 11774 },
+  "vessel_captain": "Test Captain",
+  "trip_number": 1,
+  "sp_code_target": "BIGEYE",
+  "depart_port": "FM",
+  "depart_datetime": "2026-06-01T08:00Z",
+  "ll_activities": [
+    {
+      "activity_id": 1,
+      "act_datetime": "2026-06-02T05:30Z",
+      "lat": "0410.000",
+      "lon": "+16225.000",
+      "ll_catches": [
+        { "sp_code_ret": "BET", "sp_ret_no": 12 },
+        { "sp_code_ret": "YFT" }
+      ]
+    }
+  ]
+}

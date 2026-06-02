@@ -1,0 +1,28 @@
+{
+  "trip_id": "MINISET20260603",
+  "license": "FM26-LL-MINI",
+  "vessel_identification": { "wcpfc_vid": 11774 },
+  "vessel_captain": "Lin YaQing",
+  "trip_number": 1,
+  "sp_code_target": "BET",
+  "depart_port": "FMPNI",
+  "unload_port": "FMPNI",
+  "depart_datetime": "2026-06-01T08:00Z",
+  "unload_datetime": "2026-06-03T17:00Z",
+  "is_incremental": false,
+  "ll_activities": [
+    {
+      "activity_id": 1,
+      "act_datetime": "2026-06-02T05:30Z",
+      "lat": "+0410.000",
+      "lon": "+16225.000",
+      "hk_btwn_flt": 25,
+      "hooks": 2500,
+      "ll_catches": [
+        { "sp_code_ret": "BET", "sp_ret_no": 12, "sp_ret_mt": 0.420, "sp_disc_no": 1 },
+        { "sp_code_ret": "YFT", "sp_ret_no": 4, "sp_ret_mt": 0.095, "sp_disc_no": 0 },
+        { "sp_code_ret": "BSH", "sp_ret_no": 0, "sp_ret_mt": 0.000, "sp_disc_no": 3 }
+      ]
+    }
+  ]
+}

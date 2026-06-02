@@ -1,0 +1,11 @@
+species_code,common_name,species_group,lmax_cm,lw_a,lw_b,is_protected
+SKJ,Skipjack tuna,tuna,110,5.5e-06,3.34,0
+YFT,Yellowfin tuna,tuna,200,2.5e-05,2.98,0
+BET,Bigeye tuna,tuna,200,3.7e-05,2.95,0
+ALB,Albacore tuna,tuna,120,1.3e-05,3.1,0
+BSH,Blue shark,shark,400,3.2e-06,3.13,0
+OCS,Oceanic whitetip,shark,350,4e-06,3.1,1
+FAL,Silky shark,shark,330,4.5e-06,3.08,1
+TTX,Sea turtle,turtle,120,0.0,0.0,1
+SBX,Seabird,seabird,90,0.0,0.0,1
+MAM,Marine mammal,mammal,300,0.0,0.0,1

@@ -1,0 +1,24 @@
+category,record_id,tier,rule,detail
+catch_effort,T2024-006,structural,mandatory_field_missing,vessel_id is blank
+catch_effort,T2024-011,structural,vessel_not_registered,vessel_id absent from registry
+catch_effort,T2024-016,structural,invalid_code,"gear_code not in {LL,PS,PL}"
+catch_effort,T2024-021,structural,coordinate_out_of_range,latitude 95 > 90
+catch_effort,T2024-026,structural,invalid_date,set_date not ISO / impossible date
+catch_effort,T2024-031,logical,impossible_trip_duration,trip_days exceeds MAX_TRIP_DAYS
+catch_effort,T2024-032,logical,non_positive_duration,trip_days <= 0
+catch_effort,T2024-036,logical,vessel_on_land,coordinate inside Australian landmass
+catch_effort,T2024-041,logical,implausible_cpue,catch-per-hook above ceiling
+catch_effort,T2024-051,logical,exceeds_hold_capacity,total catch exceeds vessel hold capacity
+catch_effort,T2024-046,compliance,effort_over_guideline,hooks per set exceeds MAX_HOOKS_PER_SET
+catch_effort,T2024-056,logical,catch_total_mismatch,catch_total_kg != sum of species weights
+catch_effort,T2024-002,logical,duplicate_in_history,trip_id already recorded in TUFMAN 2
+catch_effort,T2024-061,logical,duplicate_logsheet,trip_id duplicated within submission
+em_longline,T2024-001,logical,excessive_speed,implied vessel speed between events exceeds max structural knots
+size_composition,S0004,logical,length_over_lmax,length exceeds species Lmax
+size_composition,S0008,logical,weight_at_length,weight implausible for length
+size_composition,S0012,structural,invalid_code,"sex not in {M,F,U}"
+size_composition,S0015,structural,mandatory_field_missing,length_cm is blank
+observer_bycatch,O0003,compliance,protected_species_interaction,sea turtle interaction (dead)
+observer_bycatch,T2024-001,compliance,shark_bycatch_over_threshold,shark interactions per 1000 hooks exceed MAX_SHARK_BYCATCH_RATE
+observer_bycatch,O0006,structural,invalid_code,species_code not in reference
+observer_bycatch,O0009,logical,negative_count,count below zero

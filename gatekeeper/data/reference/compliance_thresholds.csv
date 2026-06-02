@@ -1,0 +1,7 @@
+rule_id,description,threshold,unit
+MAX_TRIP_DAYS,Maximum plausible trip duration,120,days
+MAX_HOOKS_PER_SET,Max longline hooks per set (effort guideline),3500,hooks
+MAX_SETS_PER_DAY,Max purse-seine sets per day,3,sets
+MAX_SHARK_BYCATCH_RATE,Max shark interactions per 1000 hooks,8.0,per_1000_hooks
+MAX_CPUE_KG_PER_HOOK,Implausible longline catch-per-hook ceiling,12.0,kg_per_hook
+WEIGHT_AT_LENGTH_TOL,Allowed deviation from length-weight curve,0.45,fraction

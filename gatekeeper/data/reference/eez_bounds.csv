@@ -1,0 +1,10 @@
+code,country,lon_min,lon_max,lat_min,lat_max
+PNG,Papua New Guinea,139,160,-12,1
+SLB,Solomon Islands,155,170,-13,-5
+FSM,Micronesia,137,164,0,14
+KIR,Kiribati,169,-150,-12,8
+MHL,Marshall Islands,160,175,4,15
+FJI,Fiji,174,-178,-23,-12
+TUV,Tuvalu,175,180,-11,-5
+NRU,Nauru,165,168,-1,0.5
+HIGH,High seas pocket,160,180,-10,10

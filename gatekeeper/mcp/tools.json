@@ -99,6 +99,30 @@
       }
     },
     {
+      "name": "assess_prepaw_readiness",
+      "r_function": "mcp_assess_prepaw",
+      "description": "Flags catch in Region 7 (ID/PH/VN) that needs un-aggregated operational data for the 2026 WCPO bigeye stock assessment.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "rows": { "type": "array" } },
+        "required": ["rows"]
+      }
+    },
+    {
+      "name": "render_national_report_part1",
+      "r_function": "mcp_render_report_part1",
+      "description": "Compiles the official WCPFC Annual Report Part 1 from validated local data using the SPC R Markdown/Quarto template framework.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "country_code": { "type": "string" },
+          "reporting_year": { "type": "integer" },
+          "output_format": { "type": "string", "enum": ["word_document", "pdf_document", "markdown"], "default": "markdown" }
+        },
+        "required": ["country_code"]
+      }
+    },
+    {
       "name": "execute_r_validation",
       "r_function": "validate_submission",
       "description": "Runs the full three-tier validation engine on a standardised table and returns the findings + a forward/hold decision.",

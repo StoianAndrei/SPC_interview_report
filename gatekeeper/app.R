@@ -11,7 +11,14 @@ suppressPackageStartupMessages({
   library(leaflet)
   library(plotly)
 })
-source("global.R")
+# robust to being launched via runApp("gatekeeper") (wd = gatekeeper) or sourced
+# from the repo root (e.g. headless tests)
+local({
+  for (p in c("global.R", "gatekeeper/global.R",
+              file.path(getwd(), "gatekeeper", "global.R"))) {
+    if (file.exists(p)) { source(p, local = FALSE); break }
+  }
+})
 
 # ---- UI ---------------------------------------------------------------------
 ui <- fluidPage(

@@ -37,6 +37,9 @@ class PythonReferenceBackend:
         "check_iuu_status":       lambda a: T.check_iuu_status(a["identifiers"]),
         "lookup_vessel_charter_status": lambda a: T.charter_status(a["wcpfc_vid"], a["activity_date"]),
         "harvest_strategy_check": lambda a: T.harvest_strategy_insight(a["rows"]),
+        "assess_prepaw_readiness": lambda a: T.assess_prepaw_readiness(a["rows"]),
+        "render_national_report_part1": lambda a: T.render_report_part1(
+            a["country_code"], a.get("reporting_year"), a.get("output_format", "markdown")),
         "execute_r_validation":   lambda a: {
             "findings": T.validate_catch_effort(a["rows"]),
             "status": T.submission_status(T.validate_catch_effort(a["rows"]), len(a["rows"]))},
@@ -75,7 +78,8 @@ class MCPClient:
     def call(self, tool, **args):
         # the ADF only lets the LLM invoke DECLARED tools (sandbox boundary)
         known = self.declared | {"map_columns", "check_iuu_status",
-                                 "lookup_vessel_charter_status", "harvest_strategy_check"}
+                                 "lookup_vessel_charter_status", "harvest_strategy_check",
+                                 "assess_prepaw_readiness", "render_national_report_part1"}
         if tool not in known:
             raise PermissionError(f"tool '{tool}' is not in the MCP manifest")
         return self.backend.call(tool, args)

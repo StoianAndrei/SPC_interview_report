@@ -144,6 +144,26 @@ mcp_harvest_insight <- function(rows) {
                  100 * bet_share) else NULL)
 }
 
+# Pre-Assessment-Workshop readiness for the 2026 WCPO bigeye assessment:
+# flag catch in Region 7 (ID/PH/VN) that needs un-aggregated operational data.
+mcp_assess_prepaw <- function(rows) {
+  df <- tibble::as_tibble(rows)
+  lat <- to_num(df$latitude); lon <- to_num(df$longitude)
+  r7 <- !is.na(lat) & !is.na(lon) & lat >= -10 & lat <= 20 & lon >= 110 & lon <= 140
+  trips <- unique(df$trip_id[r7])
+  list(region7_records = sum(r7), region7_trips = as.list(trips),
+       advisory = if (length(trips))
+         sprintf("%d record(s) in Region 7 (ID/PH/VN) need un-aggregated operational data for the 2026 bigeye assessment.",
+                 sum(r7)) else NULL)
+}
+
+# Hook for the official WCPFC Annual Report Part 1 (renders the SPC R Markdown/
+# Quarto template to Word/PDF in production; returns the markdown draft here).
+mcp_render_report_part1 <- function(country_code, reporting_year = NULL,
+                                    output_format = "markdown") {
+  generate_annual_report_part1(GK_SAMPLES$catch_effort, country_code, reporting_year)
+}
+
 # vessel id / call sign -> structural profile from the offline registry
 mcp_query_vessel <- function(vessel_sign) {
   r <- REF$registry[match(vessel_sign, REF$registry$vessel_id), ]

@@ -53,6 +53,8 @@ ok("query_vessel: known vessel found", isTRUE(mcp_query_vessel("WCPFC-1001")$fou
 ok("IUU: blacklisted vessel blocks", !mcp_check_iuu("WCPFC-9999")$is_safe_to_ingest)
 ok("charter: WCPFC-11774 -> NRU in 2026",
    mcp_charter_status("WCPFC-11774", "2026-06-03")$reporting_country == "NRU")
+ok("pre-PAW readiness assessed",
+   !is.null(mcp_assess_prepaw(GK_SAMPLES$catch_effort)$region7_records))
 
 # ---- 4. TUFMAN 2 LL JSON path ----------------------------------------------
 clean <- ingest_tufman2_ll(file.path(GK_PATHS$samples, "tufman2_ll_sample.json"),

@@ -92,6 +92,9 @@ class ADFOrchestrator:
         harvest = self.mcp.call("harvest_strategy_check", rows=std_rows)
         if harvest.get("advisory"):
             self.log(f"harvest-strategy advisory: {harvest['advisory']}")
+        prepaw = self.mcp.call("assess_prepaw_readiness", rows=std_rows)
+        if prepaw.get("advisory"):
+            self.log(f"pre-PAW advisory: {prepaw['advisory']}")
 
         self.state = "DECISION"
         if not iuu["is_safe_to_ingest"]:
@@ -106,7 +109,8 @@ class ADFOrchestrator:
             "standardised_rows": std_rows, "species": species,
             "protected_species": protected, "eez_zones": zones,
             "vessel_profiles": vessels, "charter_attribution": charter,
-            "iuu": iuu, "harvest_strategy": harvest, "findings": findings,
+            "iuu": iuu, "harvest_strategy": harvest, "prepaw": prepaw,
+            "findings": findings,
             "status": status, "decision": decision,
             "friendly_flags": [self._friendly(f) for f in findings]}
 

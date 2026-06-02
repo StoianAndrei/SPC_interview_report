@@ -25,6 +25,8 @@ result <- switch(tool,
   check_iuu_status       = mcp_check_iuu(a$identifiers),
   lookup_vessel_charter_status = mcp_charter_status(a$wcpfc_vid, a$activity_date),
   harvest_strategy_check = mcp_harvest_insight(a$rows),
+  assess_prepaw_readiness = mcp_assess_prepaw(a$rows),
+  render_national_report_part1 = mcp_render_report_part1(a$country_code, a$reporting_year),
   execute_r_validation   = {
     df <- tibble::as_tibble(a$rows)
     f <- validate_submission(df, a$category, REF, gk_context())

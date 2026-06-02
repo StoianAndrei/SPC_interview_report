@@ -48,6 +48,8 @@ def run():
         ch["T-ES-001"]["is_chartered"])
     chk("harvest-strategy composition computed",
         "BET" in res["harvest_strategy"]["composition_share"])
+    chk("pre-PAW readiness assessed",
+        "region7_records" in res["prepaw"])
 
     passed = sum(1 for _, ok in checks if ok)
     for name, ok in checks:

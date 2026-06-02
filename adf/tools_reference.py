@@ -179,6 +179,34 @@ def harvest_strategy_insight(rows):
             "bigeye_share": round(bet_share, 3), "advisory": note}
 
 
+def assess_prepaw_readiness(rows):
+    """Pre-Assessment-Workshop readiness for the 2026 WCPO bigeye assessment.
+    Flags catch in Region 7 (Indonesia/Philippines/Vietnam) — the largest catch
+    contributor but with poor operational resolution — which the SC research
+    recommendations require as un-aggregated operational data."""
+    r7 = {"lat_min": -10, "lat_max": 20, "lon_min": 110, "lon_max": 140}
+    trips = []
+    for r in rows:
+        lat, lon = _num(r.get("latitude")), _num(r.get("longitude"))
+        if lat is None or lon is None:
+            continue
+        if r7["lat_min"] <= lat <= r7["lat_max"] and r7["lon_min"] <= lon <= r7["lon_max"]:
+            trips.append(r.get("trip_id"))
+    advisory = (f"{len(trips)} record(s) fall in Region 7 (ID/PH/VN). The 2026 "
+                "bigeye assessment needs un-aggregated operational data here to "
+                "resolve the size/tagging weighting conflict.") if trips else None
+    return {"region7_records": len(trips), "region7_trips": trips,
+            "advisory": advisory}
+
+
+def render_report_part1(country, year=None, fmt="markdown"):
+    """Hook for the official WCPFC Annual Report Part 1. The Python reference
+    returns a draft note; the R backend renders the SPC R Markdown/Quarto Part 1
+    template (gatekeeper/R/annual_report.R) to Word/PDF locally."""
+    return {"format": fmt, "country": country, "year": year,
+            "note": "draft (python reference); R renders the official Part 1 template"}
+
+
 def query_vessel(vessel_sign):
     r = REGISTRY.get(vessel_sign)
     if not r:

@@ -1,1 +1,1 @@
-trip_id,vessel_id,event_seq,event_time,event_type,latitude,longitude
+trip_id,vessel_id,event_seq,event_time,activity_id,event_type,latitude,longitude

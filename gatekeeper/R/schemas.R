@@ -71,7 +71,8 @@ GK_SCHEMAS <- list(
       vessel_id  = list(required = TRUE, type = "character", aliases = c("vessel")),
       event_seq  = list(required = TRUE, type = "integer", aliases = c("seq", "order")),
       event_time = list(required = TRUE, type = "character", aliases = c("timestamp", "time", "datetime")),
-      event_type = list(required = TRUE, type = "character", aliases = c("type", "activity")),
+      activity_id = list(required = FALSE, type = "integer", aliases = c("activity", "act_id")),
+      event_type = list(required = TRUE, type = "character", aliases = c("type")),
       latitude   = list(required = TRUE, type = "coord_lat", aliases = c("lat", "y")),
       longitude  = list(required = TRUE, type = "coord_lon", aliases = c("lon", "lng", "x"))
     )

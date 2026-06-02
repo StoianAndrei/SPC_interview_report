@@ -150,6 +150,35 @@ for rid, n in seen_trip.items():
     if n > 1:
         add("catch_effort", rid, "logical", "duplicate_logsheet")
 
+# overlapping logsheets: a DIFFERENT trip for the same vessel whose date range
+# overlaps -- checked against the TUFMAN 2 history mirror
+import datetime
+
+
+def parse_date(s):
+    try:
+        y, m, d = str(s).split("-"); return datetime.date(int(y), int(m), int(d))
+    except (ValueError, TypeError):
+        return None
+
+
+hist_iv = []
+for h in hist:
+    sd = parse_date(h["set_date"])
+    if sd is None:
+        continue
+    td = int(abs(to_num(h["trip_days"]) or 1))
+    hist_iv.append((h["vessel_id"], h["trip_id"], sd, sd + datetime.timedelta(days=td)))
+for r in ce:
+    sd = parse_date(r["set_date"]); td = to_num(r["trip_days"])
+    if sd is None or td is None:
+        continue
+    end = sd + datetime.timedelta(days=int(abs(td)))
+    for hv, ht, hs, he in hist_iv:
+        if hv == r["vessel_id"] and ht != r["trip_id"] and sd <= he and hs <= end:
+            add("catch_effort", r["trip_id"], "logical", "overlapping_logsheet")
+            break
+
 # --------------------------------------------------------------------------
 # Size composition
 # --------------------------------------------------------------------------
@@ -217,6 +246,18 @@ for trip, rows in by_trip.items():
         if nm / hrs > vmax:
             add("em_longline", trip, "logical", "excessive_speed")
             break
+
+# multiple in-port: two In-Port (activity_id=6) events too far apart to be the
+# same docking event
+inport = defaultdict(list)
+for r in em:
+    if str(r.get("activity_id")) == "6":
+        inport[r["trip_id"]].append((float(r["latitude"]), float(r["longitude"])))
+for trip, pts in inport.items():
+    conflict = any(haversine_nm(pts[i][0], pts[i][1], pts[k][0], pts[k][1]) > 50
+                   for i in range(len(pts)) for k in range(i + 1, len(pts)))
+    if conflict:
+        add("em_longline", trip, "logical", "multiple_in_port")
 
 # ==========================================================================
 # Compare findings against the manifest

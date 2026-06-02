@@ -92,6 +92,20 @@ validate_catch_effort <- function(df, ref, history = NULL) {
     hkey <- paste(history$trip_id, history$vessel_id)
     emit(key %in% hkey, "logical", "duplicate_in_history", "trip_id",
          "trip already recorded in TUFMAN 2 (merge or update)")
+
+    # overlapping logsheets: a DIFFERENT trip for the same vessel whose date
+    # range overlaps. (Mirrors db.R's SQL query; see mirror_find_overlaps().)
+    hs <- suppressWarnings(as.Date(history$set_date))
+    htd <- to_num(history$trip_days); htd[is.na(htd)] <- 1
+    he <- hs + abs(htd)
+    rs <- suppressWarnings(as.Date(df$set_date)); re <- rs + ifelse(is.na(td), 0, abs(td))
+    overlap <- vapply(seq_len(nrow(df)), function(i) {
+      if (is.na(rs[i])) return(FALSE)
+      any(history$vessel_id == df$vessel_id[i] & history$trip_id != df$trip_id[i] &
+            !is.na(hs) & rs[i] <= he & hs <= re[i])
+    }, logical(1))
+    emit(overlap, "logical", "overlapping_logsheet", "set_date",
+         "trip dates overlap another trip already recorded for this vessel")
   }
   emit(df$trip_id %in% df$trip_id[duplicated(df$trip_id)],
        "logical", "duplicate_logsheet", "trip_id",
@@ -219,6 +233,23 @@ validate_em_longline <- function(df, ref) {
           sprintf("implied speed %.0f kn exceeds max %.0f kn", nm / hrs, sub$vmax[i])))
         break
       }
+    }
+  }
+  # multiple in-port: two In-Port (activity_id == 6) events too far apart to be
+  # the same docking event (a vessel can't be at two distant ports at once)
+  if ("activity_id" %in% names(df)) {
+    ip <- df2 %>% filter(to_num(activity_id) == 6)
+    for (tp in unique(ip$trip_id)) {
+      sub <- ip %>% filter(trip_id == tp)
+      if (nrow(sub) < 2) next
+      far <- FALSE
+      for (i in 1:(nrow(sub) - 1)) for (k in (i + 1):nrow(sub))
+        if (!is.na(haversine_nm(sub$lat[i], sub$lon[i], sub$lat[k], sub$lon[k])) &&
+            haversine_nm(sub$lat[i], sub$lon[i], sub$lat[k], sub$lon[k]) > 50) far <- TRUE
+      if (far)
+        f <- bind_rows(f, finding(cat, tp, sub$.row[1], "logical",
+          "multiple_in_port", "activity_id",
+          "two In-Port events at distant locations on the same day"))
     }
   }
   f

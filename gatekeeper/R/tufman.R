@@ -11,13 +11,26 @@
 # =============================================================================
 
 TUFMAN2 <- list(
-  base = "https://tufman2.example.spc.int/api/v2",  # placeholder; set for live
+  base = Sys.getenv("TUFMAN2_BASE", "https://tufman2.example.spc.int/api/v2"),
   token_path = "/auth/token",
-  submit_path = "/logsheets"
+  submit_path = "/logsheets",
+  # live mode performs real HTTP via httr; default is the offline mock so the
+  # appliance demonstrates the workflow without a reachable endpoint.
+  live = identical(Sys.getenv("TUFMAN2_LIVE"), "true")
 )
 
-# Step 1 -- exchange country credentials for a scoped token (mocked).
-tufman2_token <- function(country_code) {
+# Step 1 -- exchange country credentials for a scoped token.
+# Live: POST credentials to the token endpoint. Mock: synthesise a scoped token.
+tufman2_token <- function(country_code, credentials = NULL) {
+  if (isTRUE(TUFMAN2$live) && requireNamespace("httr", quietly = TRUE)) {
+    resp <- httr::POST(paste0(TUFMAN2$base, TUFMAN2$token_path),
+                       body = c(list(country = country_code), credentials),
+                       encode = "json")
+    body <- httr::content(resp, as = "parsed")
+    return(list(country = country_code, token = body$access_token,
+                scope = body$scope, expires_in = body$expires_in,
+                http_status = httr::status_code(resp)))
+  }
   list(country = country_code,
        token = paste0("mock-", country_code, "-",
                       substr(gsub("[^0-9]", "", format(Sys.time(), "%H%M%OS3")), 1, 8)),
@@ -59,13 +72,20 @@ forward_to_tufman2 <- function(status, envelope, token) {
                 message = sprintf("HELD: %d blocking error(s) must be fixed before submission.",
                                   status$n_error)))
   }
-  # --- live call would be:
-  #   httr::POST(paste0(TUFMAN2$base, TUFMAN2$submit_path),
-  #              httr::add_headers(Authorization = paste("Bearer", token$token)),
-  #              body = envelope, encode = "json")
+  if (isTRUE(TUFMAN2$live) && requireNamespace("httr", quietly = TRUE)) {
+    resp <- httr::POST(paste0(TUFMAN2$base, TUFMAN2$submit_path),
+                       httr::add_headers(Authorization = paste("Bearer", token$token)),
+                       body = envelope, encode = "json")
+    body <- httr::content(resp, as = "parsed")
+    return(list(forwarded = httr::status_code(resp) %in% c(200, 201),
+                http_status = httr::status_code(resp),
+                guid = body$guid %||% NA_character_,
+                message = paste("TUFMAN 2 responded:", httr::status_code(resp)),
+                scope = token$scope))
+  }
   guid <- paste0(format(Sys.time(), "%Y%m%d"), "-",
                  paste(sample(c(0:9, letters[1:6]), 8, TRUE), collapse = ""))
   list(forwarded = TRUE, http_status = 201, guid = guid,
-       message = sprintf("ACCEPTED by TUFMAN 2. Report GUID: %s", guid),
+       message = sprintf("ACCEPTED by TUFMAN 2 (mock). Report GUID: %s", guid),
        scope = token$scope)
 }

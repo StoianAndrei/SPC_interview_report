@@ -66,8 +66,8 @@ COLS = {
         "catch_alb_kg", "catch_total_kg",
     ],
     "em_longline": [
-        "trip_id", "vessel_id", "event_seq", "event_time", "event_type",
-        "latitude", "longitude",
+        "trip_id", "vessel_id", "event_seq", "event_time", "activity_id",
+        "event_type", "latitude", "longitude",
     ],
     "size_composition": [
         "sample_id", "trip_id", "species_code", "length_cm", "weight_kg",
@@ -304,6 +304,12 @@ for h in range(1, 51):
 # the duplicate-in-history plant: trip already on file for that vessel
 history.append(dict(trip_id=ce[1]["trip_id"], vessel_id=ce[1]["vessel_id"],
                     set_date=ce[1]["set_date"], trip_days=ce[1]["trip_days"]))
+# the overlapping-logsheet plant: a DIFFERENT trip for ce[2]'s vessel whose
+# date range overlaps ce[2]'s -- a vessel cannot be on two trips at once
+history.append(dict(trip_id="H2024-OVL", vessel_id=ce[2]["vessel_id"],
+                    set_date=ce[2]["set_date"], trip_days=3))
+flag("catch_effort", ce[2]["trip_id"], "logical", "overlapping_logsheet",
+     "trip dates overlap another trip already recorded for this vessel")
 write_csv(os.path.join(SMP, "tufman2_history.csv"), history,
           ["trip_id", "vessel_id", "set_date", "trip_days"])
 
@@ -321,33 +327,47 @@ def haversine_nm(lat1, lon1, lat2, lon2):
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
 
+# activity_id codes per TUFMAN 2 LL standard: 1=Set, 3=Transit, 6=In Port
 em = []
-ll_trips = [r for r in ce if r["gear_code"] == "LL"][:14]
+ll_trips = [r for r in ce if r["gear_code"] == "LL" and abs(float(r["latitude"])) <= 90][:14]
 for tr in ll_trips:
     lat, lon = float(tr["latitude"]), float(tr["longitude"])
-    if abs(lat) > 90:        # skip the planted out-of-range coordinate
-        continue
     t = 0
-    for seq in range(1, 7):
-        # ~8 knots: move a small distance each 3-hour step
-        lat += random.uniform(-0.2, 0.2)
+    # event 1: depart In Port (6) near a port just off the fishing ground
+    em.append(dict(trip_id=tr["trip_id"], vessel_id=tr["vessel_id"], event_seq=1,
+                   event_time=f"{tr['set_date']}T{t:02d}:00:00Z", activity_id=6,
+                   event_type="IN_PORT", latitude=round(lat + 0.4, 3),
+                   longitude=round(lon + 0.4, 3)))
+    for seq in range(2, 7):
+        lat += random.uniform(-0.2, 0.2)   # ~8 knots between 3-hour steps
         lon += random.uniform(0.1, 0.4)
         t += 3
+        aid = 1 if seq % 2 == 0 else 3      # alternate Fishing Set / Transit
         em.append(dict(trip_id=tr["trip_id"], vessel_id=tr["vessel_id"],
-                       event_seq=seq,
-                       event_time=f"{tr['set_date']}T{t % 24:02d}:00:00Z",
-                       event_type=random.choice(["SET", "HAUL", "POSITION"]),
+                       event_seq=seq, event_time=f"{tr['set_date']}T{t:02d}:00:00Z",
+                       activity_id=aid, event_type="SET" if aid == 1 else "TRANSIT",
                        latitude=round(lat, 3), longitude=round(lon, 3)))
 
-# plant an excessive-speed segment: a 6-degree jump (~360 nm) in one 3h step
+# plant excessive-speed: a 6-degree (~360 nm) jump in one 3h step
 speed_trip = ll_trips[0]["trip_id"]
 rows_for_trip = [r for r in em if r["trip_id"] == speed_trip]
-if rows_for_trip:
-    j = rows_for_trip[-1]
-    j["latitude"] = round(j["latitude"] + 6.0, 3)
-    j["longitude"] = round(j["longitude"] + 4.0, 3)
+j = rows_for_trip[-1]
+j["latitude"] = round(j["latitude"] + 6.0, 3)
+j["longitude"] = round(j["longitude"] + 4.0, 3)
 flag("em_longline", speed_trip, "logical", "excessive_speed",
      "implied vessel speed between events exceeds max structural knots")
+
+# plant multiple-in-port: a second In-Port (6) event far from the first, same
+# day -- the vessel cannot be docked at two ports hundreds of miles apart
+mip_trip = ll_trips[1]
+first_inport = [r for r in em if r["trip_id"] == mip_trip["trip_id"]][0]
+em.append(dict(trip_id=mip_trip["trip_id"], vessel_id=mip_trip["vessel_id"],
+               event_seq=7, event_time=f"{mip_trip['set_date']}T20:00:00Z",
+               activity_id=6, event_type="IN_PORT",
+               latitude=round(first_inport["latitude"] + 5.0, 3),
+               longitude=round(first_inport["longitude"] + 5.0, 3)))
+flag("em_longline", mip_trip["trip_id"], "logical", "multiple_in_port",
+     "two In-Port events at distant locations on the same day")
 
 write_csv(os.path.join(SMP, "em_longline_sample.csv"), em, COLS["em_longline"])
 

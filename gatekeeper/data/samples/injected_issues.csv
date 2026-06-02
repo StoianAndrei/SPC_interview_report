@@ -13,7 +13,9 @@ catch_effort,T2024-046,compliance,effort_over_guideline,hooks per set exceeds MA
 catch_effort,T2024-056,logical,catch_total_mismatch,catch_total_kg != sum of species weights
 catch_effort,T2024-002,logical,duplicate_in_history,trip_id already recorded in TUFMAN 2
 catch_effort,T2024-061,logical,duplicate_logsheet,trip_id duplicated within submission
+catch_effort,T2024-003,logical,overlapping_logsheet,trip dates overlap another trip already recorded for this vessel
 em_longline,T2024-001,logical,excessive_speed,implied vessel speed between events exceeds max structural knots
+em_longline,T2024-002,logical,multiple_in_port,two In-Port events at distant locations on the same day
 size_composition,S0004,logical,length_over_lmax,length exceeds species Lmax
 size_composition,S0008,logical,weight_at_length,weight implausible for length
 size_composition,S0012,structural,invalid_code,"sex not in {M,F,U}"

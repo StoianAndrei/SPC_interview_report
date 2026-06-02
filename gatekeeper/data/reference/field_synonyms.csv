@@ -27,7 +27,10 @@ target_species,espece cible,fr
 species_code,especie,es
 species_code,espece,fr
 species_code,species,en
+trip_id,trip,en
+trip_id,viaje,es
 catch_total_kg,peso total,es
+catch_total_kg,peso total kg,es
 catch_total_kg,captura total,es
 catch_total_kg,poids total,fr
 catch_total_kg,w_tonnes,en

@@ -1,0 +1,92 @@
+{
+  "mcp_version": "1.0.0",
+  "description": "Local MCP tool manifest for the Edge fisheries gateway. Each tool is a DETERMINISTIC R function (see gatekeeper/R/mcp_tools.R) that the Agent Deployment Framework (ADF) orchestrator hands to the local LLM. The LLM proposes which tool to call and with what arguments; it never computes catch weights, codes, or zones itself. Nothing leaves the local machine.",
+  "tools": [
+    {
+      "name": "read_local_file_sample",
+      "r_function": "mcp_read_file_sample",
+      "description": "Reads the headers and first N rows of an uploaded file on local disk.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_path": { "type": "string", "description": "Absolute path to the uploaded file." },
+          "n": { "type": "integer", "default": 5 }
+        },
+        "required": ["file_path"]
+      }
+    },
+    {
+      "name": "infer_content_type",
+      "r_function": "mcp_infer_content_type",
+      "description": "Infers the data category (Longline logsheet, Purse seine logsheet, Size composition, Observer/bycatch, EM longline) from column structure.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "columns": { "type": "array", "items": { "type": "string" } } },
+        "required": ["columns"]
+      }
+    },
+    {
+      "name": "resolve_fao_species_code",
+      "r_function": "mcp_resolve_fao",
+      "description": "Resolves local/vernacular/typo species names to official 3-character FAO codes via the local taxonomic dictionary.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "raw_species_string": { "type": "array", "items": { "type": "string" } } },
+        "required": ["raw_species_string"]
+      }
+    },
+    {
+      "name": "resolve_port_code",
+      "r_function": "mcp_resolve_port",
+      "description": "Maps free-text port names (e.g. 'Pohnpei Port', 'Kolonia') to the 5-letter UNLOCODE standard (FMPNI).",
+      "input_schema": {
+        "type": "object",
+        "properties": { "raw_port_string": { "type": "array", "items": { "type": "string" } } },
+        "required": ["raw_port_string"]
+      }
+    },
+    {
+      "name": "validate_spatial_eez",
+      "r_function": "mcp_validate_eez",
+      "description": "Resolves a coordinate to the EEZ / high-seas pocket it falls in and whether it is on land. (Bounding-box default; swap for R 'sf' polygon intersection in production.)",
+      "input_schema": {
+        "type": "object",
+        "properties": { "latitude": { "type": "number" }, "longitude": { "type": "number" } },
+        "required": ["latitude", "longitude"]
+      }
+    },
+    {
+      "name": "query_local_vessel_registry",
+      "r_function": "mcp_query_vessel",
+      "description": "Pulls structural metadata (flag, gear, hold capacity, max speed) for a vessel id / call sign from the offline TUFMAN 2 vessel cache.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "vessel_sign": { "type": "string" } },
+        "required": ["vessel_sign"]
+      }
+    },
+    {
+      "name": "execute_r_validation",
+      "r_function": "validate_submission",
+      "description": "Runs the full three-tier validation engine on a standardised table and returns the findings + a forward/hold decision.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "rows": { "type": "array" }
+        },
+        "required": ["category", "rows"]
+      }
+    },
+    {
+      "name": "generate_annual_report_part1",
+      "r_function": "generate_annual_report_part1",
+      "description": "Compiles validated catch/effort into the WCPFC Annual Report Part 1 summary tables (Markdown).",
+      "input_schema": {
+        "type": "object",
+        "properties": { "country": { "type": "string" }, "year": { "type": "integer" } },
+        "required": ["country"]
+      }
+    }
+  ]
+}

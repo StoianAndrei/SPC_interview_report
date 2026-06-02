@@ -17,7 +17,8 @@ local({
     if (length(hit)) hit[[1]] else "R"
   }
   for (f in c("helpers.R", "schemas.R", "validate.R", "mapping.R",
-              "health.R", "cpue.R", "tufman.R", "agent.R", "db.R"))
+              "health.R", "cpue.R", "tufman.R", "agent.R", "db.R",
+              "mcp_tools.R", "annual_report.R"))
     source(file.path(here, f), local = FALSE)
 })
 

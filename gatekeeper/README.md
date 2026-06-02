@@ -123,11 +123,36 @@ python3 gatekeeper/data-raw/verify_rules.py               # PROVES all 23 are ca
 mappings for headers the dictionary misses; with no model the deterministic
 path is used. The LLM never invents data values.
 
-## Roadmap (clearly out of scope for this prototype)
+## MCP / ADF agent integration
 
-- Overlapping-logsheet & multiple-in-port checks against a real Postgres mirror.
-- Live TUFMAN 2 token exchange + POST (currently mocked in `R/tufman.R`).
-- React/FastAPI controller wrapping the Plumber engine.
-- Wiring `agent.R` to a quantized local Llama/Mistral for fuzzy header discovery.
+The deterministic R functions are exposed as **Model Context Protocol tools**
+(`mcp/tools.json`, implemented in `R/mcp_tools.R`) so an Agent Deployment
+Framework can orchestrate a local LLM over them — the LLM chooses *which* tool
+to call; the R tools do the resolution. This realises the "multi-angle" agents:
+
+| Agent (ADF) | MCP tool → R function |
+|---|---|
+| Data Archaeologist | `infer_content_type`, `read_local_file_sample` |
+| Species Classifier | `resolve_fao_species_code` → `translate_species` |
+| Port / UNLOCODE | `resolve_port_code` (e.g. *Pohnpei Port* → `FMPNI`) |
+| Sovereignty & EEZ | `validate_spatial_eez` (e.g. −0.54,166.91 → Nauru EEZ) |
+| Vessel Profiler | `query_local_vessel_registry` (hold capacity, speed, flag) |
+| Temporal Sanity + tiers | `execute_r_validation` → `validate_submission` |
+| Automated Reporting | `generate_annual_report_part1` (Markdown Part 1 draft) |
+
+The LLM never invents codes, weights or zones — it only routes to these tools,
+so the appliance stays trustworthy and fully local.
+
+## Roadmap
+
+- Python ADF orchestrator + live local LLM (Ollama) driving the MCP tools above
+  (the R tool layer is ready; the orchestrator is the remaining production piece).
+- Swap EEZ bounding boxes for true `sf` polygon intersection + licence
+  reconciliation (vessel flag × EEZ × date).
+- React/FastAPI controller wrapping the Plumber engine; real Postgres mirror.
+
+Done since first cut: overlapping-logsheet & multiple-in-port checks, SQLite
+mirror (`R/db.R`), live token/POST path (`TUFMAN2_LIVE`), MCP tool layer,
+Annual Report Part 1 generator.
 
 *Respecting sovereignty, trusting the science, removing the bottleneck.*

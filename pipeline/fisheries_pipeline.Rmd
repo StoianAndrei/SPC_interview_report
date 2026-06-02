@@ -1,0 +1,275 @@
+---
+title: "When the Fish Are the Budget"
+subtitle: "A glass-box data pipeline: from the Pacific Data Hub to a story about tuna"
+author: "SPC data-visualisation contest entry"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+repro:
+  packages:
+  - tidyverse
+  - janitor
+  - glue
+  - plotly
+  - kableExtra
+  - viridis
+  - scales
+output:
+  html_document:
+    theme: flatly
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    number_sections: true
+    code_folding: hide
+    fig_width: 9
+    fig_height: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, message = FALSE, warning = FALSE,
+  fig.align = "center", out.width = "100%"
+)
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, janitor, glue, plotly, kableExtra, viridis, scales)
+
+# Run the whole pipeline once; every section below reads from `res`.
+source("R/pipeline.R")
+res <- run_pipeline(use_live = TRUE, write = TRUE)
+H <- res$headlines
+```
+
+> *"Take all these thousands of data points and make patterns visible,
+> understandable. A well-made visualisation can do something a report never can."*
+> — SPC, opening the data-visualisation contest
+
+# The idea: a glass box, not a black box {#idea}
+
+Most data stories show you the **destination** — a polished chart — and ask you
+to trust the journey. This entry shows you the **whole journey**. It is a
+complete pipeline, from raw download to final picture, and it **visualises the
+data at every step** so nothing is hidden between the source and the story.
+
+The story it tells is about **tuna** — the single most valuable renewable
+resource in the Pacific. We connect the contest's required indicator,
+**mean sea surface temperature anomaly**, to where the fish are caught, how many
+vessels chase them, and how much several national budgets depend on them.
+
+```{r headline-cards, echo=FALSE, results='asis'}
+cards <- glue('
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px">
+  <div style="flex:1;min-width:150px;background:#0B3C5D;color:white;padding:14px;border-radius:8px">
+    <div style="font-size:26px;font-weight:700">+{sprintf("%.2f", H$sst_to - H$sst_from)}°C</div>
+    <div>ocean warming, {H$year_from}–{H$year_to}</div></div>
+  <div style="flex:1;min-width:150px;background:#1D6E8C;color:white;padding:14px;border-radius:8px">
+    <div style="font-size:26px;font-weight:700">+{sprintf("%.1f", H$east_shift_deg)}°</div>
+    <div>eastward shift of the catch (r = {sprintf("%+.2f", H$shift_r)})</div></div>
+  <div style="flex:1;min-width:150px;background:#2A9D8F;color:white;padding:14px;border-radius:8px">
+    <div style="font-size:26px;font-weight:700">{format(round(H$catch_to_kt), big.mark=",")} kt</div>
+    <div>tuna landed in {H$year_to}</div></div>
+  <div style="flex:1;min-width:150px;background:#E4572E;color:white;padding:14px;border-radius:8px">
+    <div style="font-size:26px;font-weight:700">{sprintf("%.0f%%", 100*H$top_dep_share)}</div>
+    <div>of {H$top_dep_country}\'s budget from tuna fees</div></div>
+</div>')
+cat(cards)
+```
+
+# The method: six steps, each one visible {#method}
+
+The pipeline runs in six stages. **Every stage emits a data snapshot and a
+small visual**, and each one writes a row into a *lineage ledger* — a running
+record of the data's shape as it moves down the pipe.
+
+| # | Stage | What it does | What it shows you |
+|---|-------|--------------|-------------------|
+| 1 | **Ingest** | Pull each indicator from the Pacific Data Hub (live SDMX), else cached sample | provenance card |
+| 2 | **Validate** | Profile types, ranges, missingness; assert expectations | pass/fail ledger + missingness map |
+| 3 | **Clean** | Standardise names & types, de-duplicate, flag outliers | before/after diff |
+| 4 | **Transform** | Reshape to one country–year panel and join the sources | join-by-join row counts |
+| 5 | **Analyse** | Quantify the warming–catch link and economic exposure | model fit |
+| 6 | **Visualise** | Six communication-grade pictures | the story |
+
+---
+
+# Stage 1 — Ingest {#ingest}
+
+For each indicator we first try the genuine **Pacific Data Hub .Stat** SDMX
+endpoint. If the network blocks it (as in an offline build), we fall back to a
+cached sample shipped with the repo — and we record **which** so the audience
+always knows the provenance of every number.
+
+```{r ingest, echo=FALSE}
+provenance_table(res$raw)
+```
+
+A first look at the raw sea surface temperature anomaly — the **required SPC
+indicator** that anchors this entry:
+
+```{r ingest-preview, echo=FALSE}
+preview_table(res$raw$sst_anomaly, n = 6,
+              caption = "Raw SST anomaly, as ingested")
+```
+
+# Stage 2 — Validate {#validate}
+
+A visualisation is only as honest as the data beneath it. Before touching the
+numbers we state our expectations and **test** them: required columns, sane year
+ranges, non-negative physical quantities, shares within [0, 1], and that the
+required indicator is actually present.
+
+```{r validate, echo=FALSE}
+validation_report(res$checks)
+```
+
+Where are the gaps? The missingness map below is the kind of picture you want
+*before* you start drawing conclusions — green is complete, warm is trouble.
+
+```{r missingness, echo=FALSE, fig.height=3.6}
+missingness_plot(res$raw)
+```
+
+# Stage 3 — Clean {#clean}
+
+Cleaning is where data quietly changes shape, so we make the change explicit:
+column names standardised (`janitor::clean_names`), types coerced, exact
+duplicates dropped. The diff below shows columns and types **before and after**;
+the density overlay confirms cleaning preserved the signal and only fixed
+structure.
+
+```{r clean-diff, echo=FALSE}
+clean_diff_table(res$raw$tuna_catch, res$cleaned$tuna_catch,
+                 caption = "tuna_catch: raw vs cleaned schema")
+```
+
+```{r clean-check, echo=FALSE, fig.height=3.8}
+clean_check_plot(res$raw$sst_anomaly, res$cleaned$sst_anomaly,
+                 "sst_anomaly_c",
+                 "SST anomaly distribution: raw vs cleaned")
+```
+
+# Stage 4 — Transform {#transform}
+
+The four sources live at different grains. We collapse each to a common
+**country–year** grain and join them into one tidy panel, plus the derived
+series the story needs (catch centre-of-gravity, catch per vessel). Here is the
+analysis-ready panel:
+
+```{r transform-preview, echo=FALSE}
+preview_table(res$tf$panel, n = 8, caption = "Harmonised country–year panel")
+```
+
+Each join keeps the data on the same country–year grid — the funnel below shows
+the row count holding steady as we merge in effort, economics and geography:
+
+```{r join-funnel, echo=FALSE, fig.height=3.6}
+join_funnel_plot()
+```
+
+# The data's journey, as one picture {#lineage}
+
+This is the signature of the method. The **lineage ledger** below records every
+step; the plot turns that ledger into a single view of how each dataset's row
+count flows from ingest to harmonised panel. You can read the whole pipeline off
+one chart.
+
+```{r lineage-table, echo=FALSE}
+lineage_table()
+```
+
+```{r lineage-plot, echo=FALSE, fig.height=5}
+lineage_plot()
+```
+
+---
+
+# Stage 5 & 6 — The story {#story}
+
+Everything above earns the right to draw these six pictures.
+
+## 1. The ocean is warming {#v-warming}
+
+The required indicator, region-wide. The trend is unmistakable.
+
+```{r v1, echo=FALSE}
+ggplotly(viz_warming(res$tf))
+```
+
+## 2. As the ocean warms, the tuna move east {#v-shift}
+
+The link at the heart of the entry. Each point is a year; as the sea surface
+temperature anomaly rises, the **catch centre-of-gravity** — the catch-weighted
+average longitude of the fishery — slides east.
+
+```{r v2, echo=FALSE}
+viz_eastward_shift(res$tf, res$shift)
+```
+
+```{r v2-model, echo=FALSE, results='asis'}
+cat(glue(
+  "Across the record the catch centre-of-gravity moved **+{sprintf('%.1f', H$east_shift_deg)}° ",
+  "of longitude east**, correlated with the SST anomaly at **r = {sprintf('%+.2f', H$shift_r)}** ",
+  "(slope ≈ {sprintf('%.1f', res$shift$slope)}° east per °C of warming). ",
+  "When tuna cross from one nation's waters into another's, so does the licence revenue — ",
+  "which is why the next picture matters so much."))
+```
+
+## 3. A million-tonne harvest, led by skipjack {#v-species}
+
+```{r v3, echo=FALSE}
+viz_species(res$tf)
+```
+
+## 4. Where the fleet fishes {#v-map}
+
+A schematic Pacific layout (EEZ centroids, east →). Bubble size is the number of
+active vessels; compare the first and last years of the record. The fleet is
+concentrated in **PNA waters** in the west — the same waters most exposed to the
+eastward shift above.
+
+```{r v4, echo=FALSE, fig.height=7}
+viz_vessel_map(res$cleaned)
+```
+
+## 5. More vessels, more catch {#v-effort}
+
+Effort and harvest have risen together — rising pressure on a shared stock.
+
+```{r v5, echo=FALSE}
+viz_catch_effort(res$tf)
+```
+
+## 6. When the fish are the budget {#v-dependence}
+
+Why this is not an abstract climate story. For several island states, tuna
+**access fees are a majority of government revenue** — the schools, clinics and
+sea walls are paid for by fish that are, literally, on the move.
+
+```{r v6, echo=FALSE}
+viz_dependence(res$dependence)
+```
+
+# Why it matters, and using the data responsibly {#responsibly}
+
+Read the pictures together and the system the SPC speech described comes into
+focus: a **warming ocean** (stage 1's indicator) is associated with the tuna
+fishery **drifting east** (stage 5), away from the **PNA waters** (stage 6 map)
+whose **budgets depend on it** (final chart). Climate stress doesn't stay in the
+climate column — it reaches tourism, food security, and the money that funds
+public services.
+
+**On responsibility.** The numbers in this build are a **synthetic sample**,
+clearly labelled in `data/meta/sources.csv`, so the pipeline can run offline.
+The ingest layer is wired to the real Pacific Data Hub .Stat SDMX endpoints:
+swapping in the genuine series is a one-line change per indicator in
+`R/00_config.R`. Every transformation is logged in the lineage ledger above, so
+a reader can audit exactly what happened between the source and the story —
+which is the whole point of building a glass box.
+
+```{r session, echo=FALSE}
+print(res)
+```
+
+---
+
+*Built as a method as much as a chart: a reproducible, fully visible pipeline
+that anyone can point at the Pacific Data Hub and re-run. Our people, our
+children, our future.*

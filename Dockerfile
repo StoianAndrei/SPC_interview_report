@@ -4,13 +4,18 @@ FROM rocker/verse:4.1.2
 WORKDIR /home/rstudio
 RUN apt-get update -y && apt-get install -y rsync
 RUN tlmgr install collection-latexrecommended
-RUN install2.r --error --skipinstalled \ 
-  DataExplorer \ 
-  echarts4r \ 
-  ggplot2 \ 
-  janitor \ 
-  skimr \ 
-  tidyverse \ 
+RUN install2.r --error --skipinstalled \
+  DataExplorer \
+  echarts4r \
+  ggplot2 \
+  glue \
+  janitor \
+  kableExtra \
+  pacman \
+  plotly \
+  scales \
+  skimr \
+  tidyverse \
   viridis
 RUN installGithub.r \ 
   aaronpeikert/repro@adb5fa569

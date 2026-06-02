@@ -1,0 +1,313 @@
+geo,country,year,indicator,unit,sst_anomaly_c
+PNG,Papua New Guinea,2000,Mean sea surface temperature anomaly,degrees Celsius,0.35
+PNG,Papua New Guinea,2001,Mean sea surface temperature anomaly,degrees Celsius,0.436
+PNG,Papua New Guinea,2002,Mean sea surface temperature anomaly,degrees Celsius,0.575
+PNG,Papua New Guinea,2003,Mean sea surface temperature anomaly,degrees Celsius,0.416
+PNG,Papua New Guinea,2004,Mean sea surface temperature anomaly,degrees Celsius,0.487
+PNG,Papua New Guinea,2005,Mean sea surface temperature anomaly,degrees Celsius,0.392
+PNG,Papua New Guinea,2006,Mean sea surface temperature anomaly,degrees Celsius,0.547
+PNG,Papua New Guinea,2007,Mean sea surface temperature anomaly,degrees Celsius,0.49
+PNG,Papua New Guinea,2008,Mean sea surface temperature anomaly,degrees Celsius,0.579
+PNG,Papua New Guinea,2009,Mean sea surface temperature anomaly,degrees Celsius,0.69
+PNG,Papua New Guinea,2010,Mean sea surface temperature anomaly,degrees Celsius,0.492
+PNG,Papua New Guinea,2011,Mean sea surface temperature anomaly,degrees Celsius,0.546
+PNG,Papua New Guinea,2012,Mean sea surface temperature anomaly,degrees Celsius,0.669
+PNG,Papua New Guinea,2013,Mean sea surface temperature anomaly,degrees Celsius,0.654
+PNG,Papua New Guinea,2014,Mean sea surface temperature anomaly,degrees Celsius,0.783
+PNG,Papua New Guinea,2015,Mean sea surface temperature anomaly,degrees Celsius,1.006
+PNG,Papua New Guinea,2016,Mean sea surface temperature anomaly,degrees Celsius,0.937
+PNG,Papua New Guinea,2017,Mean sea surface temperature anomaly,degrees Celsius,0.754
+PNG,Papua New Guinea,2018,Mean sea surface temperature anomaly,degrees Celsius,0.76
+PNG,Papua New Guinea,2019,Mean sea surface temperature anomaly,degrees Celsius,0.987
+PNG,Papua New Guinea,2020,Mean sea surface temperature anomaly,degrees Celsius,0.72
+PNG,Papua New Guinea,2021,Mean sea surface temperature anomaly,degrees Celsius,0.634
+PNG,Papua New Guinea,2022,Mean sea surface temperature anomaly,degrees Celsius,0.67
+PNG,Papua New Guinea,2023,Mean sea surface temperature anomaly,degrees Celsius,1.164
+SLB,Solomon Islands,2000,Mean sea surface temperature anomaly,degrees Celsius,0.282
+SLB,Solomon Islands,2001,Mean sea surface temperature anomaly,degrees Celsius,0.268
+SLB,Solomon Islands,2002,Mean sea surface temperature anomaly,degrees Celsius,0.568
+SLB,Solomon Islands,2003,Mean sea surface temperature anomaly,degrees Celsius,0.38
+SLB,Solomon Islands,2004,Mean sea surface temperature anomaly,degrees Celsius,0.381
+SLB,Solomon Islands,2005,Mean sea surface temperature anomaly,degrees Celsius,0.349
+SLB,Solomon Islands,2006,Mean sea surface temperature anomaly,degrees Celsius,0.474
+SLB,Solomon Islands,2007,Mean sea surface temperature anomaly,degrees Celsius,0.468
+SLB,Solomon Islands,2008,Mean sea surface temperature anomaly,degrees Celsius,0.424
+SLB,Solomon Islands,2009,Mean sea surface temperature anomaly,degrees Celsius,0.676
+SLB,Solomon Islands,2010,Mean sea surface temperature anomaly,degrees Celsius,0.246
+SLB,Solomon Islands,2011,Mean sea surface temperature anomaly,degrees Celsius,0.529
+SLB,Solomon Islands,2012,Mean sea surface temperature anomaly,degrees Celsius,0.52
+SLB,Solomon Islands,2013,Mean sea surface temperature anomaly,degrees Celsius,0.588
+SLB,Solomon Islands,2014,Mean sea surface temperature anomaly,degrees Celsius,0.648
+SLB,Solomon Islands,2015,Mean sea surface temperature anomaly,degrees Celsius,1.027
+SLB,Solomon Islands,2016,Mean sea surface temperature anomaly,degrees Celsius,0.871
+SLB,Solomon Islands,2017,Mean sea surface temperature anomaly,degrees Celsius,0.593
+SLB,Solomon Islands,2018,Mean sea surface temperature anomaly,degrees Celsius,0.802
+SLB,Solomon Islands,2019,Mean sea surface temperature anomaly,degrees Celsius,0.87
+SLB,Solomon Islands,2020,Mean sea surface temperature anomaly,degrees Celsius,0.691
+SLB,Solomon Islands,2021,Mean sea surface temperature anomaly,degrees Celsius,0.553
+SLB,Solomon Islands,2022,Mean sea surface temperature anomaly,degrees Celsius,0.473
+SLB,Solomon Islands,2023,Mean sea surface temperature anomaly,degrees Celsius,1.014
+FSM,Micronesia (Fed. States),2000,Mean sea surface temperature anomaly,degrees Celsius,0.254
+FSM,Micronesia (Fed. States),2001,Mean sea surface temperature anomaly,degrees Celsius,0.419
+FSM,Micronesia (Fed. States),2002,Mean sea surface temperature anomaly,degrees Celsius,0.483
+FSM,Micronesia (Fed. States),2003,Mean sea surface temperature anomaly,degrees Celsius,0.466
+FSM,Micronesia (Fed. States),2004,Mean sea surface temperature anomaly,degrees Celsius,0.521
+FSM,Micronesia (Fed. States),2005,Mean sea surface temperature anomaly,degrees Celsius,0.52
+FSM,Micronesia (Fed. States),2006,Mean sea surface temperature anomaly,degrees Celsius,0.567
+FSM,Micronesia (Fed. States),2007,Mean sea surface temperature anomaly,degrees Celsius,0.445
+FSM,Micronesia (Fed. States),2008,Mean sea surface temperature anomaly,degrees Celsius,0.516
+FSM,Micronesia (Fed. States),2009,Mean sea surface temperature anomaly,degrees Celsius,0.783
+FSM,Micronesia (Fed. States),2010,Mean sea surface temperature anomaly,degrees Celsius,0.416
+FSM,Micronesia (Fed. States),2011,Mean sea surface temperature anomaly,degrees Celsius,0.57
+FSM,Micronesia (Fed. States),2012,Mean sea surface temperature anomaly,degrees Celsius,0.66
+FSM,Micronesia (Fed. States),2013,Mean sea surface temperature anomaly,degrees Celsius,0.673
+FSM,Micronesia (Fed. States),2014,Mean sea surface temperature anomaly,degrees Celsius,0.718
+FSM,Micronesia (Fed. States),2015,Mean sea surface temperature anomaly,degrees Celsius,0.909
+FSM,Micronesia (Fed. States),2016,Mean sea surface temperature anomaly,degrees Celsius,0.941
+FSM,Micronesia (Fed. States),2017,Mean sea surface temperature anomaly,degrees Celsius,0.683
+FSM,Micronesia (Fed. States),2018,Mean sea surface temperature anomaly,degrees Celsius,0.841
+FSM,Micronesia (Fed. States),2019,Mean sea surface temperature anomaly,degrees Celsius,0.934
+FSM,Micronesia (Fed. States),2020,Mean sea surface temperature anomaly,degrees Celsius,0.684
+FSM,Micronesia (Fed. States),2021,Mean sea surface temperature anomaly,degrees Celsius,0.654
+FSM,Micronesia (Fed. States),2022,Mean sea surface temperature anomaly,degrees Celsius,0.776
+FSM,Micronesia (Fed. States),2023,Mean sea surface temperature anomaly,degrees Celsius,0.949
+NRU,Nauru,2000,Mean sea surface temperature anomaly,degrees Celsius,0.207
+NRU,Nauru,2001,Mean sea surface temperature anomaly,degrees Celsius,0.46
+NRU,Nauru,2002,Mean sea surface temperature anomaly,degrees Celsius,0.591
+NRU,Nauru,2003,Mean sea surface temperature anomaly,degrees Celsius,0.373
+NRU,Nauru,2004,Mean sea surface temperature anomaly,degrees Celsius,0.343
+NRU,Nauru,2005,Mean sea surface temperature anomaly,degrees Celsius,0.539
+NRU,Nauru,2006,Mean sea surface temperature anomaly,degrees Celsius,0.493
+NRU,Nauru,2007,Mean sea surface temperature anomaly,degrees Celsius,0.538
+NRU,Nauru,2008,Mean sea surface temperature anomaly,degrees Celsius,0.521
+NRU,Nauru,2009,Mean sea surface temperature anomaly,degrees Celsius,0.602
+NRU,Nauru,2010,Mean sea surface temperature anomaly,degrees Celsius,0.418
+NRU,Nauru,2011,Mean sea surface temperature anomaly,degrees Celsius,0.643
+NRU,Nauru,2012,Mean sea surface temperature anomaly,degrees Celsius,0.525
+NRU,Nauru,2013,Mean sea surface temperature anomaly,degrees Celsius,0.626
+NRU,Nauru,2014,Mean sea surface temperature anomaly,degrees Celsius,0.761
+NRU,Nauru,2015,Mean sea surface temperature anomaly,degrees Celsius,0.976
+NRU,Nauru,2016,Mean sea surface temperature anomaly,degrees Celsius,0.972
+NRU,Nauru,2017,Mean sea surface temperature anomaly,degrees Celsius,0.75
+NRU,Nauru,2018,Mean sea surface temperature anomaly,degrees Celsius,0.919
+NRU,Nauru,2019,Mean sea surface temperature anomaly,degrees Celsius,0.975
+NRU,Nauru,2020,Mean sea surface temperature anomaly,degrees Celsius,0.832
+NRU,Nauru,2021,Mean sea surface temperature anomaly,degrees Celsius,0.692
+NRU,Nauru,2022,Mean sea surface temperature anomaly,degrees Celsius,0.702
+NRU,Nauru,2023,Mean sea surface temperature anomaly,degrees Celsius,1.055
+KIR,Kiribati,2000,Mean sea surface temperature anomaly,degrees Celsius,0.35
+KIR,Kiribati,2001,Mean sea surface temperature anomaly,degrees Celsius,0.413
+KIR,Kiribati,2002,Mean sea surface temperature anomaly,degrees Celsius,0.519
+KIR,Kiribati,2003,Mean sea surface temperature anomaly,degrees Celsius,0.387
+KIR,Kiribati,2004,Mean sea surface temperature anomaly,degrees Celsius,0.449
+KIR,Kiribati,2005,Mean sea surface temperature anomaly,degrees Celsius,0.391
+KIR,Kiribati,2006,Mean sea surface temperature anomaly,degrees Celsius,0.442
+KIR,Kiribati,2007,Mean sea surface temperature anomaly,degrees Celsius,0.403
+KIR,Kiribati,2008,Mean sea surface temperature anomaly,degrees Celsius,0.564
+KIR,Kiribati,2009,Mean sea surface temperature anomaly,degrees Celsius,0.599
+KIR,Kiribati,2010,Mean sea surface temperature anomaly,degrees Celsius,0.369
+KIR,Kiribati,2011,Mean sea surface temperature anomaly,degrees Celsius,0.844
+KIR,Kiribati,2012,Mean sea surface temperature anomaly,degrees Celsius,0.526
+KIR,Kiribati,2013,Mean sea surface temperature anomaly,degrees Celsius,0.602
+KIR,Kiribati,2014,Mean sea surface temperature anomaly,degrees Celsius,0.732
+KIR,Kiribati,2015,Mean sea surface temperature anomaly,degrees Celsius,1.053
+KIR,Kiribati,2016,Mean sea surface temperature anomaly,degrees Celsius,0.959
+KIR,Kiribati,2017,Mean sea surface temperature anomaly,degrees Celsius,0.644
+KIR,Kiribati,2018,Mean sea surface temperature anomaly,degrees Celsius,0.905
+KIR,Kiribati,2019,Mean sea surface temperature anomaly,degrees Celsius,1.107
+KIR,Kiribati,2020,Mean sea surface temperature anomaly,degrees Celsius,0.55
+KIR,Kiribati,2021,Mean sea surface temperature anomaly,degrees Celsius,0.684
+KIR,Kiribati,2022,Mean sea surface temperature anomaly,degrees Celsius,0.641
+KIR,Kiribati,2023,Mean sea surface temperature anomaly,degrees Celsius,1.129
+MHL,Marshall Islands,2000,Mean sea surface temperature anomaly,degrees Celsius,0.352
+MHL,Marshall Islands,2001,Mean sea surface temperature anomaly,degrees Celsius,0.446
+MHL,Marshall Islands,2002,Mean sea surface temperature anomaly,degrees Celsius,0.476
+MHL,Marshall Islands,2003,Mean sea surface temperature anomaly,degrees Celsius,0.429
+MHL,Marshall Islands,2004,Mean sea surface temperature anomaly,degrees Celsius,0.527
+MHL,Marshall Islands,2005,Mean sea surface temperature anomaly,degrees Celsius,0.515
+MHL,Marshall Islands,2006,Mean sea surface temperature anomaly,degrees Celsius,0.527
+MHL,Marshall Islands,2007,Mean sea surface temperature anomaly,degrees Celsius,0.514
+MHL,Marshall Islands,2008,Mean sea surface temperature anomaly,degrees Celsius,0.576
+MHL,Marshall Islands,2009,Mean sea surface temperature anomaly,degrees Celsius,0.626
+MHL,Marshall Islands,2010,Mean sea surface temperature anomaly,degrees Celsius,0.371
+MHL,Marshall Islands,2011,Mean sea surface temperature anomaly,degrees Celsius,0.592
+MHL,Marshall Islands,2012,Mean sea surface temperature anomaly,degrees Celsius,0.615
+MHL,Marshall Islands,2013,Mean sea surface temperature anomaly,degrees Celsius,0.664
+MHL,Marshall Islands,2014,Mean sea surface temperature anomaly,degrees Celsius,0.782
+MHL,Marshall Islands,2015,Mean sea surface temperature anomaly,degrees Celsius,0.989
+MHL,Marshall Islands,2016,Mean sea surface temperature anomaly,degrees Celsius,0.846
+MHL,Marshall Islands,2017,Mean sea surface temperature anomaly,degrees Celsius,0.671
+MHL,Marshall Islands,2018,Mean sea surface temperature anomaly,degrees Celsius,0.929
+MHL,Marshall Islands,2019,Mean sea surface temperature anomaly,degrees Celsius,1.012
+MHL,Marshall Islands,2020,Mean sea surface temperature anomaly,degrees Celsius,0.686
+MHL,Marshall Islands,2021,Mean sea surface temperature anomaly,degrees Celsius,0.679
+MHL,Marshall Islands,2022,Mean sea surface temperature anomaly,degrees Celsius,0.72
+MHL,Marshall Islands,2023,Mean sea surface temperature anomaly,degrees Celsius,1.161
+TUV,Tuvalu,2000,Mean sea surface temperature anomaly,degrees Celsius,0.461
+TUV,Tuvalu,2001,Mean sea surface temperature anomaly,degrees Celsius,0.377
+TUV,Tuvalu,2002,Mean sea surface temperature anomaly,degrees Celsius,0.564
+TUV,Tuvalu,2003,Mean sea surface temperature anomaly,degrees Celsius,0.446
+TUV,Tuvalu,2004,Mean sea surface temperature anomaly,degrees Celsius,0.49
+TUV,Tuvalu,2005,Mean sea surface temperature anomaly,degrees Celsius,0.332
+TUV,Tuvalu,2006,Mean sea surface temperature anomaly,degrees Celsius,0.504
+TUV,Tuvalu,2007,Mean sea surface temperature anomaly,degrees Celsius,0.59
+TUV,Tuvalu,2008,Mean sea surface temperature anomaly,degrees Celsius,0.622
+TUV,Tuvalu,2009,Mean sea surface temperature anomaly,degrees Celsius,0.738
+TUV,Tuvalu,2010,Mean sea surface temperature anomaly,degrees Celsius,0.367
+TUV,Tuvalu,2011,Mean sea surface temperature anomaly,degrees Celsius,0.611
+TUV,Tuvalu,2012,Mean sea surface temperature anomaly,degrees Celsius,0.643
+TUV,Tuvalu,2013,Mean sea surface temperature anomaly,degrees Celsius,0.602
+TUV,Tuvalu,2014,Mean sea surface temperature anomaly,degrees Celsius,0.789
+TUV,Tuvalu,2015,Mean sea surface temperature anomaly,degrees Celsius,1.039
+TUV,Tuvalu,2016,Mean sea surface temperature anomaly,degrees Celsius,0.953
+TUV,Tuvalu,2017,Mean sea surface temperature anomaly,degrees Celsius,0.843
+TUV,Tuvalu,2018,Mean sea surface temperature anomaly,degrees Celsius,0.887
+TUV,Tuvalu,2019,Mean sea surface temperature anomaly,degrees Celsius,0.881
+TUV,Tuvalu,2020,Mean sea surface temperature anomaly,degrees Celsius,0.64
+TUV,Tuvalu,2021,Mean sea surface temperature anomaly,degrees Celsius,0.587
+TUV,Tuvalu,2022,Mean sea surface temperature anomaly,degrees Celsius,0.764
+TUV,Tuvalu,2023,Mean sea surface temperature anomaly,degrees Celsius,1.046
+PLW,Palau,2000,Mean sea surface temperature anomaly,degrees Celsius,0.333
+PLW,Palau,2001,Mean sea surface temperature anomaly,degrees Celsius,0.354
+PLW,Palau,2002,Mean sea surface temperature anomaly,degrees Celsius,0.516
+PLW,Palau,2003,Mean sea surface temperature anomaly,degrees Celsius,0.408
+PLW,Palau,2004,Mean sea surface temperature anomaly,degrees Celsius,0.475
+PLW,Palau,2005,Mean sea surface temperature anomaly,degrees Celsius,0.45
+PLW,Palau,2006,Mean sea surface temperature anomaly,degrees Celsius,0.503
+PLW,Palau,2007,Mean sea surface temperature anomaly,degrees Celsius,0.455
+PLW,Palau,2008,Mean sea surface temperature anomaly,degrees Celsius,0.563
+PLW,Palau,2009,Mean sea surface temperature anomaly,degrees Celsius,0.593
+PLW,Palau,2010,Mean sea surface temperature anomaly,degrees Celsius,0.444
+PLW,Palau,2011,Mean sea surface temperature anomaly,degrees Celsius,0.512
+PLW,Palau,2012,Mean sea surface temperature anomaly,degrees Celsius,0.635
+PLW,Palau,2013,Mean sea surface temperature anomaly,degrees Celsius,0.666
+PLW,Palau,2014,Mean sea surface temperature anomaly,degrees Celsius,0.725
+PLW,Palau,2015,Mean sea surface temperature anomaly,degrees Celsius,0.897
+PLW,Palau,2016,Mean sea surface temperature anomaly,degrees Celsius,0.901
+PLW,Palau,2017,Mean sea surface temperature anomaly,degrees Celsius,0.745
+PLW,Palau,2018,Mean sea surface temperature anomaly,degrees Celsius,0.862
+PLW,Palau,2019,Mean sea surface temperature anomaly,degrees Celsius,0.963
+PLW,Palau,2020,Mean sea surface temperature anomaly,degrees Celsius,0.572
+PLW,Palau,2021,Mean sea surface temperature anomaly,degrees Celsius,0.735
+PLW,Palau,2022,Mean sea surface temperature anomaly,degrees Celsius,0.738
+PLW,Palau,2023,Mean sea surface temperature anomaly,degrees Celsius,0.979
+TKL,Tokelau,2000,Mean sea surface temperature anomaly,degrees Celsius,0.361
+TKL,Tokelau,2001,Mean sea surface temperature anomaly,degrees Celsius,0.389
+TKL,Tokelau,2002,Mean sea surface temperature anomaly,degrees Celsius,0.453
+TKL,Tokelau,2003,Mean sea surface temperature anomaly,degrees Celsius,0.359
+TKL,Tokelau,2004,Mean sea surface temperature anomaly,degrees Celsius,0.395
+TKL,Tokelau,2005,Mean sea surface temperature anomaly,degrees Celsius,0.456
+TKL,Tokelau,2006,Mean sea surface temperature anomaly,degrees Celsius,0.361
+TKL,Tokelau,2007,Mean sea surface temperature anomaly,degrees Celsius,0.518
+TKL,Tokelau,2008,Mean sea surface temperature anomaly,degrees Celsius,0.529
+TKL,Tokelau,2009,Mean sea surface temperature anomaly,degrees Celsius,0.533
+TKL,Tokelau,2010,Mean sea surface temperature anomaly,degrees Celsius,0.351
+TKL,Tokelau,2011,Mean sea surface temperature anomaly,degrees Celsius,0.564
+TKL,Tokelau,2012,Mean sea surface temperature anomaly,degrees Celsius,0.507
+TKL,Tokelau,2013,Mean sea surface temperature anomaly,degrees Celsius,0.486
+TKL,Tokelau,2014,Mean sea surface temperature anomaly,degrees Celsius,0.653
+TKL,Tokelau,2015,Mean sea surface temperature anomaly,degrees Celsius,0.9
+TKL,Tokelau,2016,Mean sea surface temperature anomaly,degrees Celsius,0.877
+TKL,Tokelau,2017,Mean sea surface temperature anomaly,degrees Celsius,0.679
+TKL,Tokelau,2018,Mean sea surface temperature anomaly,degrees Celsius,0.749
+TKL,Tokelau,2019,Mean sea surface temperature anomaly,degrees Celsius,0.715
+TKL,Tokelau,2020,Mean sea surface temperature anomaly,degrees Celsius,0.545
+TKL,Tokelau,2021,Mean sea surface temperature anomaly,degrees Celsius,0.516
+TKL,Tokelau,2022,Mean sea surface temperature anomaly,degrees Celsius,0.582
+TKL,Tokelau,2023,Mean sea surface temperature anomaly,degrees Celsius,1.054
+FJI,Fiji,2000,Mean sea surface temperature anomaly,degrees Celsius,0.277
+FJI,Fiji,2001,Mean sea surface temperature anomaly,degrees Celsius,0.325
+FJI,Fiji,2002,Mean sea surface temperature anomaly,degrees Celsius,0.399
+FJI,Fiji,2003,Mean sea surface temperature anomaly,degrees Celsius,0.342
+FJI,Fiji,2004,Mean sea surface temperature anomaly,degrees Celsius,0.312
+FJI,Fiji,2005,Mean sea surface temperature anomaly,degrees Celsius,0.393
+FJI,Fiji,2006,Mean sea surface temperature anomaly,degrees Celsius,0.344
+FJI,Fiji,2007,Mean sea surface temperature anomaly,degrees Celsius,0.376
+FJI,Fiji,2008,Mean sea surface temperature anomaly,degrees Celsius,0.399
+FJI,Fiji,2009,Mean sea surface temperature anomaly,degrees Celsius,0.607
+FJI,Fiji,2010,Mean sea surface temperature anomaly,degrees Celsius,0.388
+FJI,Fiji,2011,Mean sea surface temperature anomaly,degrees Celsius,0.584
+FJI,Fiji,2012,Mean sea surface temperature anomaly,degrees Celsius,0.545
+FJI,Fiji,2013,Mean sea surface temperature anomaly,degrees Celsius,0.617
+FJI,Fiji,2014,Mean sea surface temperature anomaly,degrees Celsius,0.6
+FJI,Fiji,2015,Mean sea surface temperature anomaly,degrees Celsius,0.91
+FJI,Fiji,2016,Mean sea surface temperature anomaly,degrees Celsius,0.854
+FJI,Fiji,2017,Mean sea surface temperature anomaly,degrees Celsius,0.699
+FJI,Fiji,2018,Mean sea surface temperature anomaly,degrees Celsius,0.818
+FJI,Fiji,2019,Mean sea surface temperature anomaly,degrees Celsius,0.897
+FJI,Fiji,2020,Mean sea surface temperature anomaly,degrees Celsius,0.622
+FJI,Fiji,2021,Mean sea surface temperature anomaly,degrees Celsius,0.638
+FJI,Fiji,2022,Mean sea surface temperature anomaly,degrees Celsius,0.712
+FJI,Fiji,2023,Mean sea surface temperature anomaly,degrees Celsius,1.115
+WSM,Samoa,2000,Mean sea surface temperature anomaly,degrees Celsius,0.301
+WSM,Samoa,2001,Mean sea surface temperature anomaly,degrees Celsius,0.302
+WSM,Samoa,2002,Mean sea surface temperature anomaly,degrees Celsius,0.513
+WSM,Samoa,2003,Mean sea surface temperature anomaly,degrees Celsius,0.284
+WSM,Samoa,2004,Mean sea surface temperature anomaly,degrees Celsius,0.406
+WSM,Samoa,2005,Mean sea surface temperature anomaly,degrees Celsius,0.383
+WSM,Samoa,2006,Mean sea surface temperature anomaly,degrees Celsius,0.371
+WSM,Samoa,2007,Mean sea surface temperature anomaly,degrees Celsius,0.424
+WSM,Samoa,2008,Mean sea surface temperature anomaly,degrees Celsius,0.579
+WSM,Samoa,2009,Mean sea surface temperature anomaly,degrees Celsius,0.628
+WSM,Samoa,2010,Mean sea surface temperature anomaly,degrees Celsius,0.349
+WSM,Samoa,2011,Mean sea surface temperature anomaly,degrees Celsius,0.594
+WSM,Samoa,2012,Mean sea surface temperature anomaly,degrees Celsius,0.551
+WSM,Samoa,2013,Mean sea surface temperature anomaly,degrees Celsius,0.616
+WSM,Samoa,2014,Mean sea surface temperature anomaly,degrees Celsius,0.655
+WSM,Samoa,2015,Mean sea surface temperature anomaly,degrees Celsius,0.921
+WSM,Samoa,2016,Mean sea surface temperature anomaly,degrees Celsius,0.839
+WSM,Samoa,2017,Mean sea surface temperature anomaly,degrees Celsius,0.679
+WSM,Samoa,2018,Mean sea surface temperature anomaly,degrees Celsius,0.831
+WSM,Samoa,2019,Mean sea surface temperature anomaly,degrees Celsius,0.861
+WSM,Samoa,2020,Mean sea surface temperature anomaly,degrees Celsius,0.629
+WSM,Samoa,2021,Mean sea surface temperature anomaly,degrees Celsius,0.572
+WSM,Samoa,2022,Mean sea surface temperature anomaly,degrees Celsius,0.596
+WSM,Samoa,2023,Mean sea surface temperature anomaly,degrees Celsius,1.039
+COK,Cook Islands,2000,Mean sea surface temperature anomaly,degrees Celsius,0.241
+COK,Cook Islands,2001,Mean sea surface temperature anomaly,degrees Celsius,0.3
+COK,Cook Islands,2002,Mean sea surface temperature anomaly,degrees Celsius,0.475
+COK,Cook Islands,2003,Mean sea surface temperature anomaly,degrees Celsius,0.389
+COK,Cook Islands,2004,Mean sea surface temperature anomaly,degrees Celsius,0.416
+COK,Cook Islands,2005,Mean sea surface temperature anomaly,degrees Celsius,0.308
+COK,Cook Islands,2006,Mean sea surface temperature anomaly,degrees Celsius,0.358
+COK,Cook Islands,2007,Mean sea surface temperature anomaly,degrees Celsius,0.465
+COK,Cook Islands,2008,Mean sea surface temperature anomaly,degrees Celsius,0.469
+COK,Cook Islands,2009,Mean sea surface temperature anomaly,degrees Celsius,0.59
+COK,Cook Islands,2010,Mean sea surface temperature anomaly,degrees Celsius,0.34
+COK,Cook Islands,2011,Mean sea surface temperature anomaly,degrees Celsius,0.574
+COK,Cook Islands,2012,Mean sea surface temperature anomaly,degrees Celsius,0.445
+COK,Cook Islands,2013,Mean sea surface temperature anomaly,degrees Celsius,0.611
+COK,Cook Islands,2014,Mean sea surface temperature anomaly,degrees Celsius,0.652
+COK,Cook Islands,2015,Mean sea surface temperature anomaly,degrees Celsius,0.863
+COK,Cook Islands,2016,Mean sea surface temperature anomaly,degrees Celsius,0.824
+COK,Cook Islands,2017,Mean sea surface temperature anomaly,degrees Celsius,0.684
+COK,Cook Islands,2018,Mean sea surface temperature anomaly,degrees Celsius,0.781
+COK,Cook Islands,2019,Mean sea surface temperature anomaly,degrees Celsius,0.953
+COK,Cook Islands,2020,Mean sea surface temperature anomaly,degrees Celsius,0.529
+COK,Cook Islands,2021,Mean sea surface temperature anomaly,degrees Celsius,0.706
+COK,Cook Islands,2022,Mean sea surface temperature anomaly,degrees Celsius,0.658
+COK,Cook Islands,2023,Mean sea surface temperature anomaly,degrees Celsius,0.983
+PYF,French Polynesia,2000,Mean sea surface temperature anomaly,degrees Celsius,0.325
+PYF,French Polynesia,2001,Mean sea surface temperature anomaly,degrees Celsius,0.292
+PYF,French Polynesia,2002,Mean sea surface temperature anomaly,degrees Celsius,0.491
+PYF,French Polynesia,2003,Mean sea surface temperature anomaly,degrees Celsius,0.367
+PYF,French Polynesia,2004,Mean sea surface temperature anomaly,degrees Celsius,0.339
+PYF,French Polynesia,2005,Mean sea surface temperature anomaly,degrees Celsius,0.355
+PYF,French Polynesia,2006,Mean sea surface temperature anomaly,degrees Celsius,0.4
+PYF,French Polynesia,2007,Mean sea surface temperature anomaly,degrees Celsius,0.501
+PYF,French Polynesia,2008,Mean sea surface temperature anomaly,degrees Celsius,0.493
+PYF,French Polynesia,2009,Mean sea surface temperature anomaly,degrees Celsius,0.609
+PYF,French Polynesia,2010,Mean sea surface temperature anomaly,degrees Celsius,0.349
+PYF,French Polynesia,2011,Mean sea surface temperature anomaly,degrees Celsius,0.511
+PYF,French Polynesia,2012,Mean sea surface temperature anomaly,degrees Celsius,0.563
+PYF,French Polynesia,2013,Mean sea surface temperature anomaly,degrees Celsius,0.656
+PYF,French Polynesia,2014,Mean sea surface temperature anomaly,degrees Celsius,0.657
+PYF,French Polynesia,2015,Mean sea surface temperature anomaly,degrees Celsius,0.938
+PYF,French Polynesia,2016,Mean sea surface temperature anomaly,degrees Celsius,0.824
+PYF,French Polynesia,2017,Mean sea surface temperature anomaly,degrees Celsius,0.649
+PYF,French Polynesia,2018,Mean sea surface temperature anomaly,degrees Celsius,0.745
+PYF,French Polynesia,2019,Mean sea surface temperature anomaly,degrees Celsius,0.934
+PYF,French Polynesia,2020,Mean sea surface temperature anomaly,degrees Celsius,0.608
+PYF,French Polynesia,2021,Mean sea surface temperature anomaly,degrees Celsius,0.577
+PYF,French Polynesia,2022,Mean sea surface temperature anomaly,degrees Celsius,0.639
+PYF,French Polynesia,2023,Mean sea surface temperature anomaly,degrees Celsius,1.157

@@ -1,0 +1,19 @@
+file,column,description,type
+sst_anomaly.csv,geo,ISO3 country/territory code,character
+sst_anomaly.csv,country,Country / territory name,character
+sst_anomaly.csv,year,Calendar year,integer
+sst_anomaly.csv,indicator,SPC indicator name,character
+sst_anomaly.csv,unit,Unit of measure,character
+sst_anomaly.csv,sst_anomaly_c,Mean sea surface temperature anomaly vs baseline (degC),numeric
+tuna_catch.csv,geo,ISO3 country/territory code,character
+tuna_catch.csv,year,Calendar year,integer
+tuna_catch.csv,species_code,Tuna species code (SKJ/YFT/BET/ALB),character
+tuna_catch.csv,species,Tuna species name,character
+tuna_catch.csv,catch_tonnes,Reported catch (metric tonnes),integer
+vessels.csv,gear_code,Gear code (PS/LL/PL),character
+vessels.csv,gear,Gear type,character
+vessels.csv,vessels,Active licensed vessels in the EEZ,integer
+vessels.csv,fishing_days,Total fishing days of effort,integer
+fisheries_economics.csv,access_fee_usd,Tuna access-fee revenue (USD),integer
+fisheries_economics.csv,govt_revenue_usd,Total government revenue (USD),integer
+fisheries_economics.csv,fee_share_of_govt_revenue,Access fees as share of govt revenue (0-1),numeric

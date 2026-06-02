@@ -1,0 +1,5 @@
+dataset,indicator,pdh_agency,pdh_dataflow,pdh_version,status,url
+sst_anomaly.csv,Mean sea surface temperature anomaly,SPC,DF_SST_ANOMALY,1.0,SYNTHETIC SAMPLE - replace with live PDH .Stat pull,https://stats.pacificdata.org/
+tuna_catch.csv,WCPO tuna catch by species,SPC,DF_TUNA_CATCH,1.0,SYNTHETIC SAMPLE - replace with live PDH/OFP pull,https://stats.pacificdata.org/
+vessels.csv,Licensed fishing vessels & effort,SPC,DF_TUNA_EFFORT,1.0,SYNTHETIC SAMPLE - replace with live PDH/OFP pull,https://stats.pacificdata.org/
+fisheries_economics.csv,Tuna access-fee revenue,SPC,DF_FISH_ECON,1.0,SYNTHETIC SAMPLE - illustrative,https://stats.pacificdata.org/

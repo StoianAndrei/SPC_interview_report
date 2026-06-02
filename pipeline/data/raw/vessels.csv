@@ -1,0 +1,937 @@
+geo,country,year,gear_code,gear,vessels,fishing_days
+COK,Cook Islands,2000,PS,Purse seine,71,2822
+COK,Cook Islands,2000,LL,Longline,26,3242
+COK,Cook Islands,2000,PL,Pole-and-line,7,507
+COK,Cook Islands,2001,PS,Purse seine,79,2909
+COK,Cook Islands,2001,LL,Longline,28,3342
+COK,Cook Islands,2001,PL,Pole-and-line,9,522
+COK,Cook Islands,2002,PS,Purse seine,83,3302
+COK,Cook Islands,2002,LL,Longline,31,3794
+COK,Cook Islands,2002,PL,Pole-and-line,10,593
+COK,Cook Islands,2003,PS,Purse seine,83,3176
+COK,Cook Islands,2003,LL,Longline,30,3648
+COK,Cook Islands,2003,PL,Pole-and-line,9,570
+COK,Cook Islands,2004,PS,Purse seine,90,3421
+COK,Cook Islands,2004,LL,Longline,34,3930
+COK,Cook Islands,2004,PL,Pole-and-line,10,614
+COK,Cook Islands,2005,PS,Purse seine,75,2919
+COK,Cook Islands,2005,LL,Longline,29,3353
+COK,Cook Islands,2005,PL,Pole-and-line,9,524
+COK,Cook Islands,2006,PS,Purse seine,92,3397
+COK,Cook Islands,2006,LL,Longline,32,3902
+COK,Cook Islands,2006,PL,Pole-and-line,10,610
+COK,Cook Islands,2007,PS,Purse seine,88,3293
+COK,Cook Islands,2007,LL,Longline,31,3782
+COK,Cook Islands,2007,PL,Pole-and-line,10,591
+COK,Cook Islands,2008,PS,Purse seine,100,3569
+COK,Cook Islands,2008,LL,Longline,34,4100
+COK,Cook Islands,2008,PL,Pole-and-line,11,641
+COK,Cook Islands,2009,PS,Purse seine,103,3959
+COK,Cook Islands,2009,LL,Longline,39,4548
+COK,Cook Islands,2009,PL,Pole-and-line,12,711
+COK,Cook Islands,2010,PS,Purse seine,84,3198
+COK,Cook Islands,2010,LL,Longline,28,3673
+COK,Cook Islands,2010,PL,Pole-and-line,10,574
+COK,Cook Islands,2011,PS,Purse seine,102,3856
+COK,Cook Islands,2011,LL,Longline,36,4429
+COK,Cook Islands,2011,PL,Pole-and-line,11,692
+COK,Cook Islands,2012,PS,Purse seine,98,3864
+COK,Cook Islands,2012,LL,Longline,36,4439
+COK,Cook Islands,2012,PL,Pole-and-line,11,694
+COK,Cook Islands,2013,PS,Purse seine,103,4004
+COK,Cook Islands,2013,LL,Longline,38,4600
+COK,Cook Islands,2013,PL,Pole-and-line,11,719
+COK,Cook Islands,2014,PS,Purse seine,113,4403
+COK,Cook Islands,2014,LL,Longline,44,5058
+COK,Cook Islands,2014,PL,Pole-and-line,13,790
+COK,Cook Islands,2015,PS,Purse seine,138,5284
+COK,Cook Islands,2015,LL,Longline,49,6070
+COK,Cook Islands,2015,PL,Pole-and-line,16,948
+COK,Cook Islands,2016,PS,Purse seine,142,5248
+COK,Cook Islands,2016,LL,Longline,52,6028
+COK,Cook Islands,2016,PL,Pole-and-line,15,942
+COK,Cook Islands,2017,PS,Purse seine,113,4355
+COK,Cook Islands,2017,LL,Longline,41,5002
+COK,Cook Islands,2017,PL,Pole-and-line,13,782
+COK,Cook Islands,2018,PS,Purse seine,131,5051
+COK,Cook Islands,2018,LL,Longline,46,5802
+COK,Cook Islands,2018,PL,Pole-and-line,15,907
+COK,Cook Islands,2019,PS,Purse seine,140,5443
+COK,Cook Islands,2019,LL,Longline,56,6253
+COK,Cook Islands,2019,PL,Pole-and-line,15,977
+COK,Cook Islands,2020,PS,Purse seine,102,4002
+COK,Cook Islands,2020,LL,Longline,38,4597
+COK,Cook Islands,2020,PL,Pole-and-line,12,718
+COK,Cook Islands,2021,PS,Purse seine,109,4109
+COK,Cook Islands,2021,LL,Longline,36,4721
+COK,Cook Islands,2021,PL,Pole-and-line,12,738
+COK,Cook Islands,2022,PS,Purse seine,107,4243
+COK,Cook Islands,2022,LL,Longline,40,4874
+COK,Cook Islands,2022,PL,Pole-and-line,12,762
+COK,Cook Islands,2023,PS,Purse seine,168,6437
+COK,Cook Islands,2023,LL,Longline,65,7395
+COK,Cook Islands,2023,PL,Pole-and-line,20,1155
+FJI,Fiji,2000,PS,Purse seine,122,4954
+FJI,Fiji,2000,LL,Longline,48,5691
+FJI,Fiji,2000,PL,Pole-and-line,15,889
+FJI,Fiji,2001,PS,Purse seine,134,5025
+FJI,Fiji,2001,LL,Longline,50,5772
+FJI,Fiji,2001,PL,Pole-and-line,14,902
+FJI,Fiji,2002,PS,Purse seine,132,5246
+FJI,Fiji,2002,LL,Longline,53,6027
+FJI,Fiji,2002,PL,Pole-and-line,16,942
+FJI,Fiji,2003,PS,Purse seine,140,5315
+FJI,Fiji,2003,LL,Longline,49,6106
+FJI,Fiji,2003,PL,Pole-and-line,17,954
+FJI,Fiji,2004,PS,Purse seine,147,5380
+FJI,Fiji,2004,LL,Longline,50,6180
+FJI,Fiji,2004,PL,Pole-and-line,16,966
+FJI,Fiji,2005,PS,Purse seine,146,5568
+FJI,Fiji,2005,LL,Longline,55,6396
+FJI,Fiji,2005,PL,Pole-and-line,16,999
+FJI,Fiji,2006,PS,Purse seine,154,5674
+FJI,Fiji,2006,LL,Longline,54,6518
+FJI,Fiji,2006,PL,Pole-and-line,17,1018
+FJI,Fiji,2007,PS,Purse seine,147,5630
+FJI,Fiji,2007,LL,Longline,54,6467
+FJI,Fiji,2007,PL,Pole-and-line,18,1010
+FJI,Fiji,2008,PS,Purse seine,147,5580
+FJI,Fiji,2008,LL,Longline,59,6410
+FJI,Fiji,2008,PL,Pole-and-line,17,1002
+FJI,Fiji,2009,PS,Purse seine,161,6197
+FJI,Fiji,2009,LL,Longline,60,7119
+FJI,Fiji,2009,PL,Pole-and-line,20,1112
+FJI,Fiji,2010,PS,Purse seine,149,5668
+FJI,Fiji,2010,LL,Longline,51,6511
+FJI,Fiji,2010,PL,Pole-and-line,17,1017
+FJI,Fiji,2011,PS,Purse seine,146,5693
+FJI,Fiji,2011,LL,Longline,50,6539
+FJI,Fiji,2011,PL,Pole-and-line,18,1022
+FJI,Fiji,2012,PS,Purse seine,188,6797
+FJI,Fiji,2012,LL,Longline,68,7808
+FJI,Fiji,2012,PL,Pole-and-line,21,1220
+FJI,Fiji,2013,PS,Purse seine,182,6628
+FJI,Fiji,2013,LL,Longline,60,7614
+FJI,Fiji,2013,PL,Pole-and-line,20,1190
+FJI,Fiji,2014,PS,Purse seine,174,6709
+FJI,Fiji,2014,LL,Longline,63,7707
+FJI,Fiji,2014,PL,Pole-and-line,19,1204
+FJI,Fiji,2015,PS,Purse seine,213,7757
+FJI,Fiji,2015,LL,Longline,73,8910
+FJI,Fiji,2015,PL,Pole-and-line,23,1392
+FJI,Fiji,2016,PS,Purse seine,197,7836
+FJI,Fiji,2016,LL,Longline,74,9001
+FJI,Fiji,2016,PL,Pole-and-line,21,1406
+FJI,Fiji,2017,PS,Purse seine,174,6728
+FJI,Fiji,2017,LL,Longline,66,7729
+FJI,Fiji,2017,PL,Pole-and-line,20,1208
+FJI,Fiji,2018,PS,Purse seine,200,7727
+FJI,Fiji,2018,LL,Longline,72,8876
+FJI,Fiji,2018,PL,Pole-and-line,22,1387
+FJI,Fiji,2019,PS,Purse seine,188,7681
+FJI,Fiji,2019,LL,Longline,75,8823
+FJI,Fiji,2019,PL,Pole-and-line,22,1379
+FJI,Fiji,2020,PS,Purse seine,185,7049
+FJI,Fiji,2020,LL,Longline,70,8097
+FJI,Fiji,2020,PL,Pole-and-line,22,1265
+FJI,Fiji,2021,PS,Purse seine,184,6801
+FJI,Fiji,2021,LL,Longline,66,7813
+FJI,Fiji,2021,PL,Pole-and-line,19,1221
+FJI,Fiji,2022,PS,Purse seine,160,6519
+FJI,Fiji,2022,LL,Longline,62,7489
+FJI,Fiji,2022,PL,Pole-and-line,19,1170
+FJI,Fiji,2023,PS,Purse seine,231,8538
+FJI,Fiji,2023,LL,Longline,78,9808
+FJI,Fiji,2023,PL,Pole-and-line,24,1533
+FSM,Micronesia (Fed. States),2000,PS,Purse seine,364,13659
+FSM,Micronesia (Fed. States),2000,LL,Longline,136,15691
+FSM,Micronesia (Fed. States),2000,PL,Pole-and-line,39,2452
+FSM,Micronesia (Fed. States),2001,PS,Purse seine,380,14006
+FSM,Micronesia (Fed. States),2001,LL,Longline,138,16088
+FSM,Micronesia (Fed. States),2001,PL,Pole-and-line,42,2514
+FSM,Micronesia (Fed. States),2002,PS,Purse seine,357,13375
+FSM,Micronesia (Fed. States),2002,LL,Longline,124,15364
+FSM,Micronesia (Fed. States),2002,PL,Pole-and-line,40,2401
+FSM,Micronesia (Fed. States),2003,PS,Purse seine,384,13840
+FSM,Micronesia (Fed. States),2003,LL,Longline,136,15898
+FSM,Micronesia (Fed. States),2003,PL,Pole-and-line,41,2484
+FSM,Micronesia (Fed. States),2004,PS,Purse seine,369,14753
+FSM,Micronesia (Fed. States),2004,LL,Longline,145,16947
+FSM,Micronesia (Fed. States),2004,PL,Pole-and-line,43,2648
+FSM,Micronesia (Fed. States),2005,PS,Purse seine,409,15100
+FSM,Micronesia (Fed. States),2005,LL,Longline,152,17346
+FSM,Micronesia (Fed. States),2005,PL,Pole-and-line,46,2710
+FSM,Micronesia (Fed. States),2006,PS,Purse seine,404,15730
+FSM,Micronesia (Fed. States),2006,LL,Longline,154,18069
+FSM,Micronesia (Fed. States),2006,PL,Pole-and-line,48,2823
+FSM,Micronesia (Fed. States),2007,PS,Purse seine,420,15349
+FSM,Micronesia (Fed. States),2007,LL,Longline,152,17631
+FSM,Micronesia (Fed. States),2007,PL,Pole-and-line,45,2755
+FSM,Micronesia (Fed. States),2008,PS,Purse seine,440,16193
+FSM,Micronesia (Fed. States),2008,LL,Longline,151,18601
+FSM,Micronesia (Fed. States),2008,PL,Pole-and-line,50,2906
+FSM,Micronesia (Fed. States),2009,PS,Purse seine,394,15084
+FSM,Micronesia (Fed. States),2009,LL,Longline,145,17327
+FSM,Micronesia (Fed. States),2009,PL,Pole-and-line,45,2707
+FSM,Micronesia (Fed. States),2010,PS,Purse seine,450,16440
+FSM,Micronesia (Fed. States),2010,LL,Longline,148,18885
+FSM,Micronesia (Fed. States),2010,PL,Pole-and-line,48,2951
+FSM,Micronesia (Fed. States),2011,PS,Purse seine,469,17584
+FSM,Micronesia (Fed. States),2011,LL,Longline,171,20199
+FSM,Micronesia (Fed. States),2011,PL,Pole-and-line,53,3156
+FSM,Micronesia (Fed. States),2012,PS,Purse seine,412,16001
+FSM,Micronesia (Fed. States),2012,LL,Longline,147,18380
+FSM,Micronesia (Fed. States),2012,PL,Pole-and-line,47,2872
+FSM,Micronesia (Fed. States),2013,PS,Purse seine,479,16836
+FSM,Micronesia (Fed. States),2013,LL,Longline,151,19339
+FSM,Micronesia (Fed. States),2013,PL,Pole-and-line,48,3022
+FSM,Micronesia (Fed. States),2014,PS,Purse seine,485,16809
+FSM,Micronesia (Fed. States),2014,LL,Longline,163,19309
+FSM,Micronesia (Fed. States),2014,PL,Pole-and-line,50,3017
+FSM,Micronesia (Fed. States),2015,PS,Purse seine,369,13757
+FSM,Micronesia (Fed. States),2015,LL,Longline,135,15803
+FSM,Micronesia (Fed. States),2015,PL,Pole-and-line,41,2469
+FSM,Micronesia (Fed. States),2016,PS,Purse seine,446,17002
+FSM,Micronesia (Fed. States),2016,LL,Longline,165,19530
+FSM,Micronesia (Fed. States),2016,PL,Pole-and-line,54,3052
+FSM,Micronesia (Fed. States),2017,PS,Purse seine,440,17353
+FSM,Micronesia (Fed. States),2017,LL,Longline,168,19934
+FSM,Micronesia (Fed. States),2017,PL,Pole-and-line,52,3115
+FSM,Micronesia (Fed. States),2018,PS,Purse seine,427,17197
+FSM,Micronesia (Fed. States),2018,LL,Longline,171,19755
+FSM,Micronesia (Fed. States),2018,PL,Pole-and-line,52,3087
+FSM,Micronesia (Fed. States),2019,PS,Purse seine,433,16949
+FSM,Micronesia (Fed. States),2019,LL,Longline,158,19470
+FSM,Micronesia (Fed. States),2019,PL,Pole-and-line,49,3042
+FSM,Micronesia (Fed. States),2020,PS,Purse seine,527,18835
+FSM,Micronesia (Fed. States),2020,LL,Longline,173,21637
+FSM,Micronesia (Fed. States),2020,PL,Pole-and-line,59,3381
+FSM,Micronesia (Fed. States),2021,PS,Purse seine,530,20183
+FSM,Micronesia (Fed. States),2021,LL,Longline,191,23185
+FSM,Micronesia (Fed. States),2021,PL,Pole-and-line,58,3623
+FSM,Micronesia (Fed. States),2022,PS,Purse seine,480,17275
+FSM,Micronesia (Fed. States),2022,LL,Longline,169,19844
+FSM,Micronesia (Fed. States),2022,PL,Pole-and-line,51,3101
+FSM,Micronesia (Fed. States),2023,PS,Purse seine,457,17290
+FSM,Micronesia (Fed. States),2023,LL,Longline,154,19861
+FSM,Micronesia (Fed. States),2023,PL,Pole-and-line,51,3103
+KIR,Kiribati,2000,PS,Purse seine,604,21730
+KIR,Kiribati,2000,LL,Longline,201,24961
+KIR,Kiribati,2000,PL,Pole-and-line,65,3900
+KIR,Kiribati,2001,PS,Purse seine,595,22129
+KIR,Kiribati,2001,LL,Longline,216,25420
+KIR,Kiribati,2001,PL,Pole-and-line,66,3972
+KIR,Kiribati,2002,PS,Purse seine,698,25800
+KIR,Kiribati,2002,LL,Longline,236,29637
+KIR,Kiribati,2002,PL,Pole-and-line,75,4631
+KIR,Kiribati,2003,PS,Purse seine,594,23378
+KIR,Kiribati,2003,LL,Longline,223,26855
+KIR,Kiribati,2003,PL,Pole-and-line,69,4196
+KIR,Kiribati,2004,PS,Purse seine,701,26692
+KIR,Kiribati,2004,LL,Longline,244,30662
+KIR,Kiribati,2004,PL,Pole-and-line,87,4791
+KIR,Kiribati,2005,PS,Purse seine,685,25065
+KIR,Kiribati,2005,LL,Longline,231,28792
+KIR,Kiribati,2005,PL,Pole-and-line,74,4499
+KIR,Kiribati,2006,PS,Purse seine,663,24834
+KIR,Kiribati,2006,LL,Longline,221,28527
+KIR,Kiribati,2006,PL,Pole-and-line,71,4457
+KIR,Kiribati,2007,PS,Purse seine,693,26310
+KIR,Kiribati,2007,LL,Longline,252,30223
+KIR,Kiribati,2007,PL,Pole-and-line,80,4722
+KIR,Kiribati,2008,PS,Purse seine,710,25724
+KIR,Kiribati,2008,LL,Longline,254,29549
+KIR,Kiribati,2008,PL,Pole-and-line,84,4617
+KIR,Kiribati,2009,PS,Purse seine,812,30014
+KIR,Kiribati,2009,LL,Longline,285,34477
+KIR,Kiribati,2009,PL,Pole-and-line,90,5387
+KIR,Kiribati,2010,PS,Purse seine,650,24559
+KIR,Kiribati,2010,LL,Longline,229,28212
+KIR,Kiribati,2010,PL,Pole-and-line,72,4408
+KIR,Kiribati,2011,PS,Purse seine,773,29321
+KIR,Kiribati,2011,LL,Longline,268,33682
+KIR,Kiribati,2011,PL,Pole-and-line,92,5263
+KIR,Kiribati,2012,PS,Purse seine,766,28137
+KIR,Kiribati,2012,LL,Longline,275,32321
+KIR,Kiribati,2012,PL,Pole-and-line,80,5050
+KIR,Kiribati,2013,PS,Purse seine,721,28772
+KIR,Kiribati,2013,LL,Longline,267,33051
+KIR,Kiribati,2013,PL,Pole-and-line,82,5164
+KIR,Kiribati,2014,PS,Purse seine,801,29798
+KIR,Kiribati,2014,LL,Longline,280,34230
+KIR,Kiribati,2014,PL,Pole-and-line,89,5348
+KIR,Kiribati,2015,PS,Purse seine,893,32846
+KIR,Kiribati,2015,LL,Longline,309,37731
+KIR,Kiribati,2015,PL,Pole-and-line,97,5896
+KIR,Kiribati,2016,PS,Purse seine,976,37643
+KIR,Kiribati,2016,LL,Longline,361,43241
+KIR,Kiribati,2016,PL,Pole-and-line,108,6756
+KIR,Kiribati,2017,PS,Purse seine,929,34668
+KIR,Kiribati,2017,LL,Longline,348,39824
+KIR,Kiribati,2017,PL,Pole-and-line,105,6223
+KIR,Kiribati,2018,PS,Purse seine,930,35508
+KIR,Kiribati,2018,LL,Longline,355,40789
+KIR,Kiribati,2018,PL,Pole-and-line,103,6373
+KIR,Kiribati,2019,PS,Purse seine,882,35200
+KIR,Kiribati,2019,LL,Longline,329,40435
+KIR,Kiribati,2019,PL,Pole-and-line,100,6318
+KIR,Kiribati,2020,PS,Purse seine,844,31574
+KIR,Kiribati,2020,LL,Longline,303,36269
+KIR,Kiribati,2020,PL,Pole-and-line,96,5667
+KIR,Kiribati,2021,PS,Purse seine,878,31458
+KIR,Kiribati,2021,LL,Longline,309,36136
+KIR,Kiribati,2021,PL,Pole-and-line,96,5646
+KIR,Kiribati,2022,PS,Purse seine,957,33945
+KIR,Kiribati,2022,LL,Longline,310,38993
+KIR,Kiribati,2022,PL,Pole-and-line,98,6093
+KIR,Kiribati,2023,PS,Purse seine,1087,40706
+KIR,Kiribati,2023,LL,Longline,384,46760
+KIR,Kiribati,2023,PL,Pole-and-line,124,7306
+MHL,Marshall Islands,2000,PS,Purse seine,264,10210
+MHL,Marshall Islands,2000,LL,Longline,97,11729
+MHL,Marshall Islands,2000,PL,Pole-and-line,30,1833
+MHL,Marshall Islands,2001,PS,Purse seine,268,10512
+MHL,Marshall Islands,2001,LL,Longline,97,12075
+MHL,Marshall Islands,2001,PL,Pole-and-line,33,1887
+MHL,Marshall Islands,2002,PS,Purse seine,286,11810
+MHL,Marshall Islands,2002,LL,Longline,119,13567
+MHL,Marshall Islands,2002,PL,Pole-and-line,33,2120
+MHL,Marshall Islands,2003,PS,Purse seine,295,10984
+MHL,Marshall Islands,2003,LL,Longline,106,12617
+MHL,Marshall Islands,2003,PL,Pole-and-line,33,1971
+MHL,Marshall Islands,2004,PS,Purse seine,275,10812
+MHL,Marshall Islands,2004,LL,Longline,106,12420
+MHL,Marshall Islands,2004,PL,Pole-and-line,32,1941
+MHL,Marshall Islands,2005,PS,Purse seine,280,10735
+MHL,Marshall Islands,2005,LL,Longline,103,12331
+MHL,Marshall Islands,2005,PL,Pole-and-line,29,1927
+MHL,Marshall Islands,2006,PS,Purse seine,295,11690
+MHL,Marshall Islands,2006,LL,Longline,112,13429
+MHL,Marshall Islands,2006,PL,Pole-and-line,33,2098
+MHL,Marshall Islands,2007,PS,Purse seine,272,11181
+MHL,Marshall Islands,2007,LL,Longline,110,12844
+MHL,Marshall Islands,2007,PL,Pole-and-line,36,2007
+MHL,Marshall Islands,2008,PS,Purse seine,303,11437
+MHL,Marshall Islands,2008,LL,Longline,116,13138
+MHL,Marshall Islands,2008,PL,Pole-and-line,34,2053
+MHL,Marshall Islands,2009,PS,Purse seine,329,12593
+MHL,Marshall Islands,2009,LL,Longline,121,14466
+MHL,Marshall Islands,2009,PL,Pole-and-line,36,2260
+MHL,Marshall Islands,2010,PS,Purse seine,351,12526
+MHL,Marshall Islands,2010,LL,Longline,120,14389
+MHL,Marshall Islands,2010,PL,Pole-and-line,36,2248
+MHL,Marshall Islands,2011,PS,Purse seine,336,12850
+MHL,Marshall Islands,2011,LL,Longline,122,14761
+MHL,Marshall Islands,2011,PL,Pole-and-line,39,2306
+MHL,Marshall Islands,2012,PS,Purse seine,311,12531
+MHL,Marshall Islands,2012,LL,Longline,124,14394
+MHL,Marshall Islands,2012,PL,Pole-and-line,38,2249
+MHL,Marshall Islands,2013,PS,Purse seine,349,13524
+MHL,Marshall Islands,2013,LL,Longline,133,15535
+MHL,Marshall Islands,2013,PL,Pole-and-line,41,2427
+MHL,Marshall Islands,2014,PS,Purse seine,343,13041
+MHL,Marshall Islands,2014,LL,Longline,129,14980
+MHL,Marshall Islands,2014,PL,Pole-and-line,39,2341
+MHL,Marshall Islands,2015,PS,Purse seine,392,15203
+MHL,Marshall Islands,2015,LL,Longline,144,17464
+MHL,Marshall Islands,2015,PL,Pole-and-line,48,2729
+MHL,Marshall Islands,2016,PS,Purse seine,406,15303
+MHL,Marshall Islands,2016,LL,Longline,138,17578
+MHL,Marshall Islands,2016,PL,Pole-and-line,47,2747
+MHL,Marshall Islands,2017,PS,Purse seine,393,14458
+MHL,Marshall Islands,2017,LL,Longline,130,16608
+MHL,Marshall Islands,2017,PL,Pole-and-line,40,2595
+MHL,Marshall Islands,2018,PS,Purse seine,374,14835
+MHL,Marshall Islands,2018,LL,Longline,143,17041
+MHL,Marshall Islands,2018,PL,Pole-and-line,47,2663
+MHL,Marshall Islands,2019,PS,Purse seine,395,14790
+MHL,Marshall Islands,2019,LL,Longline,154,16989
+MHL,Marshall Islands,2019,PL,Pole-and-line,46,2655
+MHL,Marshall Islands,2020,PS,Purse seine,378,13747
+MHL,Marshall Islands,2020,LL,Longline,142,15791
+MHL,Marshall Islands,2020,PL,Pole-and-line,42,2467
+MHL,Marshall Islands,2021,PS,Purse seine,404,15127
+MHL,Marshall Islands,2021,LL,Longline,137,17377
+MHL,Marshall Islands,2021,PL,Pole-and-line,47,2715
+MHL,Marshall Islands,2022,PS,Purse seine,392,14283
+MHL,Marshall Islands,2022,LL,Longline,140,16407
+MHL,Marshall Islands,2022,PL,Pole-and-line,42,2564
+MHL,Marshall Islands,2023,PS,Purse seine,373,14507
+MHL,Marshall Islands,2023,LL,Longline,132,16665
+MHL,Marshall Islands,2023,PL,Pole-and-line,45,2604
+NRU,Nauru,2000,PS,Purse seine,67,2466
+NRU,Nauru,2000,LL,Longline,24,2833
+NRU,Nauru,2000,PL,Pole-and-line,7,443
+NRU,Nauru,2001,PS,Purse seine,63,2520
+NRU,Nauru,2001,LL,Longline,25,2895
+NRU,Nauru,2001,PL,Pole-and-line,7,452
+NRU,Nauru,2002,PS,Purse seine,70,2553
+NRU,Nauru,2002,LL,Longline,25,2933
+NRU,Nauru,2002,PL,Pole-and-line,7,458
+NRU,Nauru,2003,PS,Purse seine,74,2880
+NRU,Nauru,2003,LL,Longline,25,3308
+NRU,Nauru,2003,PL,Pole-and-line,9,517
+NRU,Nauru,2004,PS,Purse seine,68,2563
+NRU,Nauru,2004,LL,Longline,24,2944
+NRU,Nauru,2004,PL,Pole-and-line,8,460
+NRU,Nauru,2005,PS,Purse seine,76,2724
+NRU,Nauru,2005,LL,Longline,28,3129
+NRU,Nauru,2005,PL,Pole-and-line,8,489
+NRU,Nauru,2006,PS,Purse seine,74,2702
+NRU,Nauru,2006,LL,Longline,26,3104
+NRU,Nauru,2006,PL,Pole-and-line,8,485
+NRU,Nauru,2007,PS,Purse seine,79,2925
+NRU,Nauru,2007,LL,Longline,27,3360
+NRU,Nauru,2007,PL,Pole-and-line,9,525
+NRU,Nauru,2008,PS,Purse seine,84,3030
+NRU,Nauru,2008,LL,Longline,29,3480
+NRU,Nauru,2008,PL,Pole-and-line,9,544
+NRU,Nauru,2009,PS,Purse seine,78,2965
+NRU,Nauru,2009,LL,Longline,27,3405
+NRU,Nauru,2009,PL,Pole-and-line,9,532
+NRU,Nauru,2010,PS,Purse seine,79,3016
+NRU,Nauru,2010,LL,Longline,30,3465
+NRU,Nauru,2010,PL,Pole-and-line,9,541
+NRU,Nauru,2011,PS,Purse seine,90,3219
+NRU,Nauru,2011,LL,Longline,30,3697
+NRU,Nauru,2011,PL,Pole-and-line,10,578
+NRU,Nauru,2012,PS,Purse seine,81,3080
+NRU,Nauru,2012,LL,Longline,30,3538
+NRU,Nauru,2012,PL,Pole-and-line,9,553
+NRU,Nauru,2013,PS,Purse seine,81,3121
+NRU,Nauru,2013,LL,Longline,27,3585
+NRU,Nauru,2013,PL,Pole-and-line,10,560
+NRU,Nauru,2014,PS,Purse seine,92,3367
+NRU,Nauru,2014,LL,Longline,33,3868
+NRU,Nauru,2014,PL,Pole-and-line,10,604
+NRU,Nauru,2015,PS,Purse seine,86,3350
+NRU,Nauru,2015,LL,Longline,32,3848
+NRU,Nauru,2015,PL,Pole-and-line,10,601
+NRU,Nauru,2016,PS,Purse seine,92,3554
+NRU,Nauru,2016,LL,Longline,33,4083
+NRU,Nauru,2016,PL,Pole-and-line,11,638
+NRU,Nauru,2017,PS,Purse seine,85,3330
+NRU,Nauru,2017,LL,Longline,29,3826
+NRU,Nauru,2017,PL,Pole-and-line,9,598
+NRU,Nauru,2018,PS,Purse seine,91,3326
+NRU,Nauru,2018,LL,Longline,30,3820
+NRU,Nauru,2018,PL,Pole-and-line,9,597
+NRU,Nauru,2019,PS,Purse seine,96,3441
+NRU,Nauru,2019,LL,Longline,32,3953
+NRU,Nauru,2019,PL,Pole-and-line,10,618
+NRU,Nauru,2020,PS,Purse seine,90,3506
+NRU,Nauru,2020,LL,Longline,33,4027
+NRU,Nauru,2020,PL,Pole-and-line,11,629
+NRU,Nauru,2021,PS,Purse seine,97,3624
+NRU,Nauru,2021,LL,Longline,34,4163
+NRU,Nauru,2021,PL,Pole-and-line,10,650
+NRU,Nauru,2022,PS,Purse seine,101,3540
+NRU,Nauru,2022,LL,Longline,34,4066
+NRU,Nauru,2022,PL,Pole-and-line,10,635
+NRU,Nauru,2023,PS,Purse seine,89,3417
+NRU,Nauru,2023,LL,Longline,33,3925
+NRU,Nauru,2023,PL,Pole-and-line,11,613
+PLW,Palau,2000,PS,Purse seine,42,1566
+PLW,Palau,2000,LL,Longline,15,1799
+PLW,Palau,2000,PL,Pole-and-line,4,281
+PLW,Palau,2001,PS,Purse seine,39,1545
+PLW,Palau,2001,LL,Longline,15,1775
+PLW,Palau,2001,PL,Pole-and-line,5,277
+PLW,Palau,2002,PS,Purse seine,31,1191
+PLW,Palau,2002,LL,Longline,12,1368
+PLW,Palau,2002,PL,Pole-and-line,3,214
+PLW,Palau,2003,PS,Purse seine,42,1604
+PLW,Palau,2003,LL,Longline,16,1843
+PLW,Palau,2003,PL,Pole-and-line,5,288
+PLW,Palau,2004,PS,Purse seine,40,1486
+PLW,Palau,2004,LL,Longline,13,1707
+PLW,Palau,2004,PL,Pole-and-line,4,267
+PLW,Palau,2005,PS,Purse seine,47,1661
+PLW,Palau,2005,LL,Longline,16,1908
+PLW,Palau,2005,PL,Pole-and-line,5,298
+PLW,Palau,2006,PS,Purse seine,45,1649
+PLW,Palau,2006,LL,Longline,17,1894
+PLW,Palau,2006,PL,Pole-and-line,5,296
+PLW,Palau,2007,PS,Purse seine,39,1540
+PLW,Palau,2007,LL,Longline,15,1769
+PLW,Palau,2007,PL,Pole-and-line,5,276
+PLW,Palau,2008,PS,Purse seine,40,1587
+PLW,Palau,2008,LL,Longline,15,1822
+PLW,Palau,2008,PL,Pole-and-line,4,285
+PLW,Palau,2009,PS,Purse seine,36,1407
+PLW,Palau,2009,LL,Longline,12,1616
+PLW,Palau,2009,PL,Pole-and-line,4,253
+PLW,Palau,2010,PS,Purse seine,53,1974
+PLW,Palau,2010,LL,Longline,19,2267
+PLW,Palau,2010,PL,Pole-and-line,6,354
+PLW,Palau,2011,PS,Purse seine,44,1597
+PLW,Palau,2011,LL,Longline,15,1834
+PLW,Palau,2011,PL,Pole-and-line,5,287
+PLW,Palau,2012,PS,Purse seine,44,1616
+PLW,Palau,2012,LL,Longline,16,1856
+PLW,Palau,2012,PL,Pole-and-line,5,290
+PLW,Palau,2013,PS,Purse seine,40,1669
+PLW,Palau,2013,LL,Longline,16,1917
+PLW,Palau,2013,PL,Pole-and-line,5,300
+PLW,Palau,2014,PS,Purse seine,42,1558
+PLW,Palau,2014,LL,Longline,15,1790
+PLW,Palau,2014,PL,Pole-and-line,5,280
+PLW,Palau,2015,PS,Purse seine,23,897
+PLW,Palau,2015,LL,Longline,9,1031
+PLW,Palau,2015,PL,Pole-and-line,3,161
+PLW,Palau,2016,PS,Purse seine,31,1194
+PLW,Palau,2016,LL,Longline,11,1372
+PLW,Palau,2016,PL,Pole-and-line,4,214
+PLW,Palau,2017,PS,Purse seine,41,1548
+PLW,Palau,2017,LL,Longline,16,1778
+PLW,Palau,2017,PL,Pole-and-line,5,278
+PLW,Palau,2018,PS,Purse seine,38,1455
+PLW,Palau,2018,LL,Longline,14,1672
+PLW,Palau,2018,PL,Pole-and-line,4,261
+PLW,Palau,2019,PS,Purse seine,33,1227
+PLW,Palau,2019,LL,Longline,11,1410
+PLW,Palau,2019,PL,Pole-and-line,3,220
+PLW,Palau,2020,PS,Purse seine,54,2025
+PLW,Palau,2020,LL,Longline,20,2326
+PLW,Palau,2020,PL,Pole-and-line,6,363
+PLW,Palau,2021,PS,Purse seine,58,2145
+PLW,Palau,2021,LL,Longline,19,2464
+PLW,Palau,2021,PL,Pole-and-line,6,385
+PLW,Palau,2022,PS,Purse seine,54,2116
+PLW,Palau,2022,LL,Longline,21,2431
+PLW,Palau,2022,PL,Pole-and-line,6,380
+PLW,Palau,2023,PS,Purse seine,31,1214
+PLW,Palau,2023,LL,Longline,12,1395
+PLW,Palau,2023,PL,Pole-and-line,4,218
+PNG,Papua New Guinea,2000,PS,Purse seine,676,26239
+PNG,Papua New Guinea,2000,LL,Longline,243,30142
+PNG,Papua New Guinea,2000,PL,Pole-and-line,81,4710
+PNG,Papua New Guinea,2001,PS,Purse seine,721,25887
+PNG,Papua New Guinea,2001,LL,Longline,247,29737
+PNG,Papua New Guinea,2001,PL,Pole-and-line,76,4646
+PNG,Papua New Guinea,2002,PS,Purse seine,573,22029
+PNG,Papua New Guinea,2002,LL,Longline,208,25306
+PNG,Papua New Guinea,2002,PL,Pole-and-line,67,3954
+PNG,Papua New Guinea,2003,PS,Purse seine,635,25293
+PNG,Papua New Guinea,2003,LL,Longline,246,29054
+PNG,Papua New Guinea,2003,PL,Pole-and-line,79,4540
+PNG,Papua New Guinea,2004,PS,Purse seine,725,26638
+PNG,Papua New Guinea,2004,LL,Longline,245,30600
+PNG,Papua New Guinea,2004,PL,Pole-and-line,82,4781
+PNG,Papua New Guinea,2005,PS,Purse seine,721,26496
+PNG,Papua New Guinea,2005,LL,Longline,239,30437
+PNG,Papua New Guinea,2005,PL,Pole-and-line,80,4756
+PNG,Papua New Guinea,2006,PS,Purse seine,678,26764
+PNG,Papua New Guinea,2006,LL,Longline,250,30744
+PNG,Papua New Guinea,2006,PL,Pole-and-line,81,4804
+PNG,Papua New Guinea,2007,PS,Purse seine,686,26855
+PNG,Papua New Guinea,2007,LL,Longline,253,30849
+PNG,Papua New Guinea,2007,PL,Pole-and-line,80,4820
+PNG,Papua New Guinea,2008,PS,Purse seine,800,29710
+PNG,Papua New Guinea,2008,LL,Longline,285,34129
+PNG,Papua New Guinea,2008,PL,Pole-and-line,87,5333
+PNG,Papua New Guinea,2009,PS,Purse seine,677,25197
+PNG,Papua New Guinea,2009,LL,Longline,230,28945
+PNG,Papua New Guinea,2009,PL,Pole-and-line,74,4523
+PNG,Papua New Guinea,2010,PS,Purse seine,752,28644
+PNG,Papua New Guinea,2010,LL,Longline,257,32904
+PNG,Papua New Guinea,2010,PL,Pole-and-line,91,5141
+PNG,Papua New Guinea,2011,PS,Purse seine,709,26547
+PNG,Papua New Guinea,2011,LL,Longline,265,30495
+PNG,Papua New Guinea,2011,PL,Pole-and-line,77,4765
+PNG,Papua New Guinea,2012,PS,Purse seine,765,28984
+PNG,Papua New Guinea,2012,LL,Longline,273,33295
+PNG,Papua New Guinea,2012,PL,Pole-and-line,87,5202
+PNG,Papua New Guinea,2013,PS,Purse seine,737,28892
+PNG,Papua New Guinea,2013,LL,Longline,256,33188
+PNG,Papua New Guinea,2013,PL,Pole-and-line,84,5186
+PNG,Papua New Guinea,2014,PS,Purse seine,710,26908
+PNG,Papua New Guinea,2014,LL,Longline,273,30910
+PNG,Papua New Guinea,2014,PL,Pole-and-line,77,4830
+PNG,Papua New Guinea,2015,PS,Purse seine,594,21508
+PNG,Papua New Guinea,2015,LL,Longline,196,24707
+PNG,Papua New Guinea,2015,PL,Pole-and-line,68,3860
+PNG,Papua New Guinea,2016,PS,Purse seine,610,24703
+PNG,Papua New Guinea,2016,LL,Longline,257,28376
+PNG,Papua New Guinea,2016,PL,Pole-and-line,78,4434
+PNG,Papua New Guinea,2017,PS,Purse seine,731,29081
+PNG,Papua New Guinea,2017,LL,Longline,271,33406
+PNG,Papua New Guinea,2017,PL,Pole-and-line,86,5220
+PNG,Papua New Guinea,2018,PS,Purse seine,729,28073
+PNG,Papua New Guinea,2018,LL,Longline,270,32248
+PNG,Papua New Guinea,2018,PL,Pole-and-line,86,5039
+PNG,Papua New Guinea,2019,PS,Purse seine,672,25660
+PNG,Papua New Guinea,2019,LL,Longline,257,29477
+PNG,Papua New Guinea,2019,PL,Pole-and-line,74,4606
+PNG,Papua New Guinea,2020,PS,Purse seine,873,32850
+PNG,Papua New Guinea,2020,LL,Longline,338,37736
+PNG,Papua New Guinea,2020,PL,Pole-and-line,95,5896
+PNG,Papua New Guinea,2021,PS,Purse seine,884,34524
+PNG,Papua New Guinea,2021,LL,Longline,339,39658
+PNG,Papua New Guinea,2021,PL,Pole-and-line,107,6197
+PNG,Papua New Guinea,2022,PS,Purse seine,905,35715
+PNG,Papua New Guinea,2022,LL,Longline,355,41026
+PNG,Papua New Guinea,2022,PL,Pole-and-line,106,6410
+PNG,Papua New Guinea,2023,PS,Purse seine,651,23742
+PNG,Papua New Guinea,2023,LL,Longline,221,27273
+PNG,Papua New Guinea,2023,PL,Pole-and-line,65,4261
+PYF,French Polynesia,2000,PS,Purse seine,62,2401
+PYF,French Polynesia,2000,LL,Longline,22,2758
+PYF,French Polynesia,2000,PL,Pole-and-line,7,431
+PYF,French Polynesia,2001,PS,Purse seine,64,2573
+PYF,French Polynesia,2001,LL,Longline,25,2956
+PYF,French Polynesia,2001,PL,Pole-and-line,7,462
+PYF,French Polynesia,2002,PS,Purse seine,94,3548
+PYF,French Polynesia,2002,LL,Longline,34,4076
+PYF,French Polynesia,2002,PL,Pole-and-line,11,637
+PYF,French Polynesia,2003,PS,Purse seine,74,2792
+PYF,French Polynesia,2003,LL,Longline,27,3207
+PYF,French Polynesia,2003,PL,Pole-and-line,8,501
+PYF,French Polynesia,2004,PS,Purse seine,76,2757
+PYF,French Polynesia,2004,LL,Longline,28,3167
+PYF,French Polynesia,2004,PL,Pole-and-line,8,495
+PYF,French Polynesia,2005,PS,Purse seine,75,2790
+PYF,French Polynesia,2005,LL,Longline,27,3205
+PYF,French Polynesia,2005,PL,Pole-and-line,8,501
+PYF,French Polynesia,2006,PS,Purse seine,78,3015
+PYF,French Polynesia,2006,LL,Longline,29,3463
+PYF,French Polynesia,2006,PL,Pole-and-line,9,541
+PYF,French Polynesia,2007,PS,Purse seine,73,2942
+PYF,French Polynesia,2007,LL,Longline,27,3380
+PYF,French Polynesia,2007,PL,Pole-and-line,10,528
+PYF,French Polynesia,2008,PS,Purse seine,86,3262
+PYF,French Polynesia,2008,LL,Longline,33,3747
+PYF,French Polynesia,2008,PL,Pole-and-line,10,585
+PYF,French Polynesia,2009,PS,Purse seine,108,3914
+PYF,French Polynesia,2009,LL,Longline,43,4496
+PYF,French Polynesia,2009,PL,Pole-and-line,12,703
+PYF,French Polynesia,2010,PS,Purse seine,65,2550
+PYF,French Polynesia,2010,LL,Longline,24,2930
+PYF,French Polynesia,2010,PL,Pole-and-line,8,458
+PYF,French Polynesia,2011,PS,Purse seine,92,3551
+PYF,French Polynesia,2011,LL,Longline,33,4079
+PYF,French Polynesia,2011,PL,Pole-and-line,10,637
+PYF,French Polynesia,2012,PS,Purse seine,90,3515
+PYF,French Polynesia,2012,LL,Longline,33,4037
+PYF,French Polynesia,2012,PL,Pole-and-line,11,631
+PYF,French Polynesia,2013,PS,Purse seine,95,3677
+PYF,French Polynesia,2013,LL,Longline,35,4224
+PYF,French Polynesia,2013,PL,Pole-and-line,12,660
+PYF,French Polynesia,2014,PS,Purse seine,95,3789
+PYF,French Polynesia,2014,LL,Longline,38,4353
+PYF,French Polynesia,2014,PL,Pole-and-line,12,680
+PYF,French Polynesia,2015,PS,Purse seine,132,5154
+PYF,French Polynesia,2015,LL,Longline,47,5920
+PYF,French Polynesia,2015,PL,Pole-and-line,16,925
+PYF,French Polynesia,2016,PS,Purse seine,131,5316
+PYF,French Polynesia,2016,LL,Longline,53,6107
+PYF,French Polynesia,2016,PL,Pole-and-line,16,954
+PYF,French Polynesia,2017,PS,Purse seine,115,4346
+PYF,French Polynesia,2017,LL,Longline,41,4993
+PYF,French Polynesia,2017,PL,Pole-and-line,13,780
+PYF,French Polynesia,2018,PS,Purse seine,120,4765
+PYF,French Polynesia,2018,LL,Longline,43,5473
+PYF,French Polynesia,2018,PL,Pole-and-line,15,855
+PYF,French Polynesia,2019,PS,Purse seine,132,5082
+PYF,French Polynesia,2019,LL,Longline,49,5838
+PYF,French Polynesia,2019,PL,Pole-and-line,15,912
+PYF,French Polynesia,2020,PS,Purse seine,96,3522
+PYF,French Polynesia,2020,LL,Longline,35,4046
+PYF,French Polynesia,2020,PL,Pole-and-line,11,632
+PYF,French Polynesia,2021,PS,Purse seine,91,3530
+PYF,French Polynesia,2021,LL,Longline,34,4055
+PYF,French Polynesia,2021,PL,Pole-and-line,11,634
+PYF,French Polynesia,2022,PS,Purse seine,100,3776
+PYF,French Polynesia,2022,LL,Longline,35,4338
+PYF,French Polynesia,2022,PL,Pole-and-line,11,678
+PYF,French Polynesia,2023,PS,Purse seine,148,5828
+PYF,French Polynesia,2023,LL,Longline,58,6695
+PYF,French Polynesia,2023,PL,Pole-and-line,17,1046
+SLB,Solomon Islands,2000,PS,Purse seine,308,11015
+SLB,Solomon Islands,2000,LL,Longline,102,12653
+SLB,Solomon Islands,2000,PL,Pole-and-line,33,1977
+SLB,Solomon Islands,2001,PS,Purse seine,291,10946
+SLB,Solomon Islands,2001,LL,Longline,105,12574
+SLB,Solomon Islands,2001,PL,Pole-and-line,33,1965
+SLB,Solomon Islands,2002,PS,Purse seine,287,11307
+SLB,Solomon Islands,2002,LL,Longline,106,12989
+SLB,Solomon Islands,2002,PL,Pole-and-line,37,2030
+SLB,Solomon Islands,2003,PS,Purse seine,307,11730
+SLB,Solomon Islands,2003,LL,Longline,113,13475
+SLB,Solomon Islands,2003,PL,Pole-and-line,38,2105
+SLB,Solomon Islands,2004,PS,Purse seine,312,12314
+SLB,Solomon Islands,2004,LL,Longline,124,14145
+SLB,Solomon Islands,2004,PL,Pole-and-line,36,2210
+SLB,Solomon Islands,2005,PS,Purse seine,324,12256
+SLB,Solomon Islands,2005,LL,Longline,123,14079
+SLB,Solomon Islands,2005,PL,Pole-and-line,36,2200
+SLB,Solomon Islands,2006,PS,Purse seine,335,12088
+SLB,Solomon Islands,2006,LL,Longline,111,13886
+SLB,Solomon Islands,2006,PL,Pole-and-line,36,2170
+SLB,Solomon Islands,2007,PS,Purse seine,312,12797
+SLB,Solomon Islands,2007,LL,Longline,114,14700
+SLB,Solomon Islands,2007,PL,Pole-and-line,39,2297
+SLB,Solomon Islands,2008,PS,Purse seine,364,13499
+SLB,Solomon Islands,2008,LL,Longline,126,15507
+SLB,Solomon Islands,2008,PL,Pole-and-line,37,2423
+SLB,Solomon Islands,2009,PS,Purse seine,327,12966
+SLB,Solomon Islands,2009,LL,Longline,131,14895
+SLB,Solomon Islands,2009,PL,Pole-and-line,37,2327
+SLB,Solomon Islands,2010,PS,Purse seine,407,14829
+SLB,Solomon Islands,2010,LL,Longline,143,17035
+SLB,Solomon Islands,2010,PL,Pole-and-line,44,2662
+SLB,Solomon Islands,2011,PS,Purse seine,367,13778
+SLB,Solomon Islands,2011,LL,Longline,137,15828
+SLB,Solomon Islands,2011,PL,Pole-and-line,41,2473
+SLB,Solomon Islands,2012,PS,Purse seine,326,12651
+SLB,Solomon Islands,2012,LL,Longline,127,14532
+SLB,Solomon Islands,2012,PL,Pole-and-line,36,2271
+SLB,Solomon Islands,2013,PS,Purse seine,343,13333
+SLB,Solomon Islands,2013,LL,Longline,130,15316
+SLB,Solomon Islands,2013,PL,Pole-and-line,41,2393
+SLB,Solomon Islands,2014,PS,Purse seine,336,13885
+SLB,Solomon Islands,2014,LL,Longline,136,15950
+SLB,Solomon Islands,2014,PL,Pole-and-line,38,2492
+SLB,Solomon Islands,2015,PS,Purse seine,351,13246
+SLB,Solomon Islands,2015,LL,Longline,118,15216
+SLB,Solomon Islands,2015,PL,Pole-and-line,41,2377
+SLB,Solomon Islands,2016,PS,Purse seine,358,13361
+SLB,Solomon Islands,2016,LL,Longline,127,15348
+SLB,Solomon Islands,2016,PL,Pole-and-line,39,2398
+SLB,Solomon Islands,2017,PS,Purse seine,366,14248
+SLB,Solomon Islands,2017,LL,Longline,134,16367
+SLB,Solomon Islands,2017,PL,Pole-and-line,40,2557
+SLB,Solomon Islands,2018,PS,Purse seine,365,13979
+SLB,Solomon Islands,2018,LL,Longline,138,16058
+SLB,Solomon Islands,2018,PL,Pole-and-line,41,2509
+SLB,Solomon Islands,2019,PS,Purse seine,366,13785
+SLB,Solomon Islands,2019,LL,Longline,134,15835
+SLB,Solomon Islands,2019,PL,Pole-and-line,38,2474
+SLB,Solomon Islands,2020,PS,Purse seine,464,16755
+SLB,Solomon Islands,2020,LL,Longline,158,19247
+SLB,Solomon Islands,2020,PL,Pole-and-line,52,3007
+SLB,Solomon Islands,2021,PS,Purse seine,390,15362
+SLB,Solomon Islands,2021,LL,Longline,142,17646
+SLB,Solomon Islands,2021,PL,Pole-and-line,46,2757
+SLB,Solomon Islands,2022,PS,Purse seine,410,15402
+SLB,Solomon Islands,2022,LL,Longline,141,17692
+SLB,Solomon Islands,2022,PL,Pole-and-line,45,2764
+SLB,Solomon Islands,2023,PS,Purse seine,405,15218
+SLB,Solomon Islands,2023,LL,Longline,142,17481
+SLB,Solomon Islands,2023,PL,Pole-and-line,47,2731
+TKL,Tokelau,2000,PS,Purse seine,33,1229
+TKL,Tokelau,2000,LL,Longline,12,1412
+TKL,Tokelau,2000,PL,Pole-and-line,4,221
+TKL,Tokelau,2001,PS,Purse seine,37,1400
+TKL,Tokelau,2001,LL,Longline,14,1608
+TKL,Tokelau,2001,PL,Pole-and-line,4,251
+TKL,Tokelau,2002,PS,Purse seine,39,1469
+TKL,Tokelau,2002,LL,Longline,14,1688
+TKL,Tokelau,2002,PL,Pole-and-line,4,264
+TKL,Tokelau,2003,PS,Purse seine,38,1433
+TKL,Tokelau,2003,LL,Longline,14,1647
+TKL,Tokelau,2003,PL,Pole-and-line,4,257
+TKL,Tokelau,2004,PS,Purse seine,38,1455
+TKL,Tokelau,2004,LL,Longline,14,1671
+TKL,Tokelau,2004,PL,Pole-and-line,4,261
+TKL,Tokelau,2005,PS,Purse seine,39,1491
+TKL,Tokelau,2005,LL,Longline,14,1712
+TKL,Tokelau,2005,PL,Pole-and-line,4,268
+TKL,Tokelau,2006,PS,Purse seine,40,1432
+TKL,Tokelau,2006,LL,Longline,14,1645
+TKL,Tokelau,2006,PL,Pole-and-line,4,257
+TKL,Tokelau,2007,PS,Purse seine,41,1520
+TKL,Tokelau,2007,LL,Longline,14,1746
+TKL,Tokelau,2007,PL,Pole-and-line,5,273
+TKL,Tokelau,2008,PS,Purse seine,42,1682
+TKL,Tokelau,2008,LL,Longline,17,1932
+TKL,Tokelau,2008,PL,Pole-and-line,5,302
+TKL,Tokelau,2009,PS,Purse seine,50,1756
+TKL,Tokelau,2009,LL,Longline,18,2018
+TKL,Tokelau,2009,PL,Pole-and-line,5,315
+TKL,Tokelau,2010,PS,Purse seine,38,1415
+TKL,Tokelau,2010,LL,Longline,14,1625
+TKL,Tokelau,2010,PL,Pole-and-line,4,254
+TKL,Tokelau,2011,PS,Purse seine,44,1587
+TKL,Tokelau,2011,LL,Longline,15,1823
+TKL,Tokelau,2011,PL,Pole-and-line,5,285
+TKL,Tokelau,2012,PS,Purse seine,43,1657
+TKL,Tokelau,2012,LL,Longline,16,1904
+TKL,Tokelau,2012,PL,Pole-and-line,5,297
+TKL,Tokelau,2013,PS,Purse seine,43,1743
+TKL,Tokelau,2013,LL,Longline,17,2002
+TKL,Tokelau,2013,PL,Pole-and-line,5,313
+TKL,Tokelau,2014,PS,Purse seine,49,1833
+TKL,Tokelau,2014,LL,Longline,17,2106
+TKL,Tokelau,2014,PL,Pole-and-line,5,329
+TKL,Tokelau,2015,PS,Purse seine,59,2272
+TKL,Tokelau,2015,LL,Longline,22,2610
+TKL,Tokelau,2015,PL,Pole-and-line,7,408
+TKL,Tokelau,2016,PS,Purse seine,58,2250
+TKL,Tokelau,2016,LL,Longline,22,2584
+TKL,Tokelau,2016,PL,Pole-and-line,6,404
+TKL,Tokelau,2017,PS,Purse seine,58,1970
+TKL,Tokelau,2017,LL,Longline,18,2263
+TKL,Tokelau,2017,PL,Pole-and-line,6,354
+TKL,Tokelau,2018,PS,Purse seine,55,2020
+TKL,Tokelau,2018,LL,Longline,18,2320
+TKL,Tokelau,2018,PL,Pole-and-line,6,363
+TKL,Tokelau,2019,PS,Purse seine,57,2109
+TKL,Tokelau,2019,LL,Longline,20,2423
+TKL,Tokelau,2019,PL,Pole-and-line,6,379
+TKL,Tokelau,2020,PS,Purse seine,48,1813
+TKL,Tokelau,2020,LL,Longline,17,2082
+TKL,Tokelau,2020,PL,Pole-and-line,6,325
+TKL,Tokelau,2021,PS,Purse seine,44,1712
+TKL,Tokelau,2021,LL,Longline,17,1967
+TKL,Tokelau,2021,PL,Pole-and-line,5,307
+TKL,Tokelau,2022,PS,Purse seine,48,1821
+TKL,Tokelau,2022,LL,Longline,17,2092
+TKL,Tokelau,2022,PL,Pole-and-line,5,327
+TKL,Tokelau,2023,PS,Purse seine,64,2415
+TKL,Tokelau,2023,LL,Longline,24,2774
+TKL,Tokelau,2023,PL,Pole-and-line,7,433
+TUV,Tuvalu,2000,PS,Purse seine,80,3083
+TUV,Tuvalu,2000,LL,Longline,31,3542
+TUV,Tuvalu,2000,PL,Pole-and-line,9,553
+TUV,Tuvalu,2001,PS,Purse seine,79,3113
+TUV,Tuvalu,2001,LL,Longline,28,3576
+TUV,Tuvalu,2001,PL,Pole-and-line,9,559
+TUV,Tuvalu,2002,PS,Purse seine,95,3471
+TUV,Tuvalu,2002,LL,Longline,36,3987
+TUV,Tuvalu,2002,PL,Pole-and-line,10,623
+TUV,Tuvalu,2003,PS,Purse seine,90,3306
+TUV,Tuvalu,2003,LL,Longline,34,3797
+TUV,Tuvalu,2003,PL,Pole-and-line,10,593
+TUV,Tuvalu,2004,PS,Purse seine,92,3645
+TUV,Tuvalu,2004,LL,Longline,35,4187
+TUV,Tuvalu,2004,PL,Pole-and-line,11,654
+TUV,Tuvalu,2005,PS,Purse seine,96,3475
+TUV,Tuvalu,2005,LL,Longline,34,3992
+TUV,Tuvalu,2005,PL,Pole-and-line,10,624
+TUV,Tuvalu,2006,PS,Purse seine,99,3654
+TUV,Tuvalu,2006,LL,Longline,36,4197
+TUV,Tuvalu,2006,PL,Pole-and-line,11,656
+TUV,Tuvalu,2007,PS,Purse seine,96,3646
+TUV,Tuvalu,2007,LL,Longline,33,4188
+TUV,Tuvalu,2007,PL,Pole-and-line,11,654
+TUV,Tuvalu,2008,PS,Purse seine,96,3714
+TUV,Tuvalu,2008,LL,Longline,37,4266
+TUV,Tuvalu,2008,PL,Pole-and-line,11,667
+TUV,Tuvalu,2009,PS,Purse seine,101,3891
+TUV,Tuvalu,2009,LL,Longline,37,4470
+TUV,Tuvalu,2009,PL,Pole-and-line,12,698
+TUV,Tuvalu,2010,PS,Purse seine,102,3739
+TUV,Tuvalu,2010,LL,Longline,37,4295
+TUV,Tuvalu,2010,PL,Pole-and-line,11,671
+TUV,Tuvalu,2011,PS,Purse seine,93,3932
+TUV,Tuvalu,2011,LL,Longline,36,4517
+TUV,Tuvalu,2011,PL,Pole-and-line,11,706
+TUV,Tuvalu,2012,PS,Purse seine,111,4081
+TUV,Tuvalu,2012,LL,Longline,38,4688
+TUV,Tuvalu,2012,PL,Pole-and-line,12,732
+TUV,Tuvalu,2013,PS,Purse seine,107,4066
+TUV,Tuvalu,2013,LL,Longline,38,4671
+TUV,Tuvalu,2013,PL,Pole-and-line,12,730
+TUV,Tuvalu,2014,PS,Purse seine,117,4243
+TUV,Tuvalu,2014,LL,Longline,40,4875
+TUV,Tuvalu,2014,PL,Pole-and-line,14,762
+TUV,Tuvalu,2015,PS,Purse seine,120,4668
+TUV,Tuvalu,2015,LL,Longline,46,5362
+TUV,Tuvalu,2015,PL,Pole-and-line,15,838
+TUV,Tuvalu,2016,PS,Purse seine,125,4629
+TUV,Tuvalu,2016,LL,Longline,44,5317
+TUV,Tuvalu,2016,PL,Pole-and-line,13,831
+TUV,Tuvalu,2017,PS,Purse seine,109,4478
+TUV,Tuvalu,2017,LL,Longline,42,5143
+TUV,Tuvalu,2017,PL,Pole-and-line,12,804
+TUV,Tuvalu,2018,PS,Purse seine,111,4413
+TUV,Tuvalu,2018,LL,Longline,43,5070
+TUV,Tuvalu,2018,PL,Pole-and-line,13,792
+TUV,Tuvalu,2019,PS,Purse seine,121,4540
+TUV,Tuvalu,2019,LL,Longline,43,5216
+TUV,Tuvalu,2019,PL,Pole-and-line,14,815
+TUV,Tuvalu,2020,PS,Purse seine,121,4391
+TUV,Tuvalu,2020,LL,Longline,43,5044
+TUV,Tuvalu,2020,PL,Pole-and-line,14,788
+TUV,Tuvalu,2021,PS,Purse seine,115,4471
+TUV,Tuvalu,2021,LL,Longline,41,5136
+TUV,Tuvalu,2021,PL,Pole-and-line,13,802
+TUV,Tuvalu,2022,PS,Purse seine,111,4227
+TUV,Tuvalu,2022,LL,Longline,39,4855
+TUV,Tuvalu,2022,PL,Pole-and-line,12,759
+TUV,Tuvalu,2023,PS,Purse seine,134,5209
+TUV,Tuvalu,2023,LL,Longline,47,5984
+TUV,Tuvalu,2023,PL,Pole-and-line,16,935
+WSM,Samoa,2000,PS,Purse seine,48,1957
+WSM,Samoa,2000,LL,Longline,20,2248
+WSM,Samoa,2000,PL,Pole-and-line,6,351
+WSM,Samoa,2001,PS,Purse seine,51,1941
+WSM,Samoa,2001,LL,Longline,18,2230
+WSM,Samoa,2001,PL,Pole-and-line,6,348
+WSM,Samoa,2002,PS,Purse seine,57,2161
+WSM,Samoa,2002,LL,Longline,22,2482
+WSM,Samoa,2002,PL,Pole-and-line,6,388
+WSM,Samoa,2003,PS,Purse seine,55,2097
+WSM,Samoa,2003,LL,Longline,21,2408
+WSM,Samoa,2003,PL,Pole-and-line,6,376
+WSM,Samoa,2004,PS,Purse seine,53,2175
+WSM,Samoa,2004,LL,Longline,20,2498
+WSM,Samoa,2004,PL,Pole-and-line,6,390
+WSM,Samoa,2005,PS,Purse seine,60,2176
+WSM,Samoa,2005,LL,Longline,20,2500
+WSM,Samoa,2005,PL,Pole-and-line,7,391
+WSM,Samoa,2006,PS,Purse seine,58,2165
+WSM,Samoa,2006,LL,Longline,21,2487
+WSM,Samoa,2006,PL,Pole-and-line,6,389
+WSM,Samoa,2007,PS,Purse seine,56,2285
+WSM,Samoa,2007,LL,Longline,22,2625
+WSM,Samoa,2007,PL,Pole-and-line,7,410
+WSM,Samoa,2008,PS,Purse seine,66,2424
+WSM,Samoa,2008,LL,Longline,23,2784
+WSM,Samoa,2008,PL,Pole-and-line,7,435
+WSM,Samoa,2009,PS,Purse seine,66,2564
+WSM,Samoa,2009,LL,Longline,25,2945
+WSM,Samoa,2009,PL,Pole-and-line,8,460
+WSM,Samoa,2010,PS,Purse seine,60,2169
+WSM,Samoa,2010,LL,Longline,20,2491
+WSM,Samoa,2010,PL,Pole-and-line,7,389
+WSM,Samoa,2011,PS,Purse seine,62,2394
+WSM,Samoa,2011,LL,Longline,23,2750
+WSM,Samoa,2011,PL,Pole-and-line,8,430
+WSM,Samoa,2012,PS,Purse seine,71,2625
+WSM,Samoa,2012,LL,Longline,24,3016
+WSM,Samoa,2012,PL,Pole-and-line,8,471
+WSM,Samoa,2013,PS,Purse seine,65,2500
+WSM,Samoa,2013,LL,Longline,24,2872
+WSM,Samoa,2013,PL,Pole-and-line,8,449
+WSM,Samoa,2014,PS,Purse seine,69,2696
+WSM,Samoa,2014,LL,Longline,25,3097
+WSM,Samoa,2014,PL,Pole-and-line,8,484
+WSM,Samoa,2015,PS,Purse seine,83,3386
+WSM,Samoa,2015,LL,Longline,31,3890
+WSM,Samoa,2015,PL,Pole-and-line,10,608
+WSM,Samoa,2016,PS,Purse seine,81,3118
+WSM,Samoa,2016,LL,Longline,28,3582
+WSM,Samoa,2016,PL,Pole-and-line,9,560
+WSM,Samoa,2017,PS,Purse seine,71,2848
+WSM,Samoa,2017,LL,Longline,27,3271
+WSM,Samoa,2017,PL,Pole-and-line,8,511
+WSM,Samoa,2018,PS,Purse seine,78,2957
+WSM,Samoa,2018,LL,Longline,28,3396
+WSM,Samoa,2018,PL,Pole-and-line,9,531
+WSM,Samoa,2019,PS,Purse seine,87,3404
+WSM,Samoa,2019,LL,Longline,31,3910
+WSM,Samoa,2019,PL,Pole-and-line,9,611
+WSM,Samoa,2020,PS,Purse seine,78,2802
+WSM,Samoa,2020,LL,Longline,24,3219
+WSM,Samoa,2020,PL,Pole-and-line,8,503
+WSM,Samoa,2021,PS,Purse seine,73,2804
+WSM,Samoa,2021,LL,Longline,25,3221
+WSM,Samoa,2021,PL,Pole-and-line,9,503
+WSM,Samoa,2022,PS,Purse seine,75,2737
+WSM,Samoa,2022,LL,Longline,27,3144
+WSM,Samoa,2022,PL,Pole-and-line,8,491
+WSM,Samoa,2023,PS,Purse seine,97,3695
+WSM,Samoa,2023,LL,Longline,35,4244
+WSM,Samoa,2023,PL,Pole-and-line,10,663

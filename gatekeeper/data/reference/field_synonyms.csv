@@ -1,0 +1,44 @@
+canonical,synonym,lang
+set_date,fecha,es
+set_date,fecha de lance,es
+set_date,date,en
+set_date,date de capture,fr
+latitude,latitud,es
+latitude,lat,en
+latitude,latitude,fr
+longitude,longitud,es
+longitude,lon,en
+longitude,longitude,fr
+vessel_id,barco,es
+vessel_id,matricula,es
+vessel_id,navire,fr
+vessel_id,vessel,en
+flag,bandera,es
+flag,pavillon,fr
+gear_code,arte,es
+gear_code,engin,fr
+gear_code,gear,en
+effort_amount,anzuelos,es
+effort_amount,esfuerzo,es
+effort_amount,hamecons,fr
+effort_amount,hooks,en
+target_species,especie objetivo,es
+target_species,espece cible,fr
+species_code,especie,es
+species_code,espece,fr
+species_code,species,en
+catch_total_kg,peso total,es
+catch_total_kg,captura total,es
+catch_total_kg,poids total,fr
+catch_total_kg,w_tonnes,en
+catch_total_kg,catch_mt,en
+length_cm,longitud horquilla,es
+length_cm,talla,es
+length_cm,longueur,fr
+weight_kg,peso,es
+weight_kg,poids,fr
+sex,sexo,es
+sex,sexe,fr
+count,numero,es
+count,nombre,fr
+count,cantidad,es

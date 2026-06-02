@@ -1,0 +1,31 @@
+# =============================================================================
+# Dockerfile.appliance  --  the Edge "Black Box" fisheries gateway
+# -----------------------------------------------------------------------------
+# Bundles the R validation engine + Shiny dashboard into a single, portable,
+# OFFLINE-capable image. A country's IT team runs `docker compose up` and their
+# private, in-border gateway is live -- no raw data ever leaves the building.
+# =============================================================================
+FROM rocker/shiny:4.3.2
+
+RUN install2.r --error --skipinstalled \
+    DT \
+    dplyr \
+    ggplot2 \
+    glue \
+    janitor \
+    jsonlite \
+    leaflet \
+    plotly \
+    plumber \
+    purrr \
+    readr \
+    stringr \
+    tidyr
+
+# the app + engine + bundled reference/sample data
+COPY . /srv/shiny-server/gatekeeper
+WORKDIR /srv/shiny-server/gatekeeper
+
+EXPOSE 3838
+# serve just this app on 3838
+CMD ["R", "-e", "shiny::runApp('/srv/shiny-server/gatekeeper', host='0.0.0.0', port=3838)"]

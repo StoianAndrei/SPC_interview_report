@@ -1,0 +1,46 @@
+# =============================================================================
+# docker-compose.yml  --  the Edge appliance, deployable with one command
+# -----------------------------------------------------------------------------
+#   docker compose up                  # gateway only (no LLM, fully offline)
+#   docker compose --profile llm up     # also start a local Ollama model so the
+#                                        # "Data Archaeologist" agent is enabled
+#
+# Everything runs inside the country's own network. The gateway never phones
+# home; the optional LLM is a LOCAL model (no data leaves the machine, no
+# training on submissions).
+# =============================================================================
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.appliance
+    ports:
+      - "3838:3838"          # Shiny dashboard
+    environment:
+      # set to the ollama service when the llm profile is up; otherwise the
+      # agent transparently falls back to deterministic dictionary mapping
+      OLLAMA_HOST: ""
+    restart: unless-stopped
+
+  # Optional: the R Plumber validation API (for a Python/Node front controller)
+  plumber:
+    build:
+      context: .
+      dockerfile: Dockerfile.appliance
+    command: ["R", "-e", "plumber::pr('/srv/shiny-server/gatekeeper/plumber.R') |> plumber::pr_run(host='0.0.0.0', port=8000)"]
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # Optional local LLM for multilingual column discovery (enabled with --profile llm)
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_models:

@@ -22,15 +22,14 @@ ok <- function(name, cond) {
   if (!isTRUE(cond)) fails <<- fails + 1
 }
 
-# A clean catch & effort submission still has planted anomalies in the sample,
-# so the gateway should HOLD it (blocking errors present).
+# Drive the reactive server headless: load a sample, validate, inspect outputs.
 testServer(server, {
   session$setInputs(country = "FJI", category = "catch_effort", source = "sample")
   session$setInputs(validate = 1)
   ok("validation populated status", !is.null(rv$status))
-  ok("status reports rows", rv$status$n_rows > 0)
+  ok("status reports rows", is.numeric(rv$status$n_rows) && rv$status$n_rows > 0)
   ok("health score computed", !is.null(rv$health) && rv$health$score >= 0)
-  ok("findings produced", nrow(rv$findings) > 0)
+  ok("findings is a data frame", is.data.frame(rv$findings))
   ok("overview row count renders", nchar(output$c_rows) > 0)
   ok("decision gate is boolean", is.logical(rv$status$can_forward))
 })

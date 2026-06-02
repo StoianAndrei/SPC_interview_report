@@ -40,7 +40,14 @@ def run():
     chk("catches coordinate_out_of_range", "coordinate_out_of_range" in rules)
     chk("catches exceeds_hold_capacity", "exceeds_hold_capacity" in rules)
     chk("catches vessel_not_registered", "vessel_not_registered" in rules)
-    chk("submission HELD (not forwarded)", res["decision"] == "HELD_FOR_REVIEW")
+    chk("IUU vessel detected (WCPFC-9999)", not res["iuu"]["is_safe_to_ingest"])
+    chk("submission BLOCKED on IUU match", res["decision"] == "BLOCKED_IUU")
+    ch = res["charter_attribution"]
+    chk("charter: T-ES-001 reattributed to Nauru",
+        ch.get("T-ES-001", {}).get("reporting_country") == "NRU" and
+        ch["T-ES-001"]["is_chartered"])
+    chk("harvest-strategy composition computed",
+        "BET" in res["harvest_strategy"]["composition_share"])
 
     passed = sum(1 for _, ok in checks if ok)
     for name, ok in checks:

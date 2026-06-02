@@ -22,6 +22,9 @@ result <- switch(tool,
   resolve_port_code      = mcp_resolve_port(a$raw_port_string),
   validate_spatial_eez   = mcp_validate_eez(a$latitude, a$longitude),
   query_local_vessel_registry = mcp_query_vessel(a$vessel_sign),
+  check_iuu_status       = mcp_check_iuu(a$identifiers),
+  lookup_vessel_charter_status = mcp_charter_status(a$wcpfc_vid, a$activity_date),
+  harvest_strategy_check = mcp_harvest_insight(a$rows),
   execute_r_validation   = {
     df <- tibble::as_tibble(a$rows)
     f <- validate_submission(df, a$category, REF, gk_context())

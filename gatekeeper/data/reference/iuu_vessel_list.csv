@@ -1,0 +1,5 @@
+vessel_id,call_sign,vessel_name,flag,imo,reason,cmm
+WCPFC-9999,,Unknown Hull,UNK,,Fishing without an entry on the WCPFC Record of Fishing Vessels,CMM 2019-07
+,4LIN2,Fu Lien No 1,PH,M-01432,Harvested species without nationality,CMM 2019-07
+,DUM-4015,Kuda Laut 03,ID,12-0001812,Fishing on the high seas without WCPFC Record entry,CMM 2019-07
+,BJ4786,Yu Fong 168,TW,,Fishing in Marshall Islands EEZ without permission,CMM 2019-07

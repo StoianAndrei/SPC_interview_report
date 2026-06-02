@@ -42,6 +42,23 @@ def main():
     for f in res["friendly_flags"]:
         print(f"  • [{f['severity'].upper()}] {f['record']}: {f['explanation']}")
 
+    if not res["iuu"]["is_safe_to_ingest"]:
+        print("\n*** IUU / COMPLIANCE ALERT — ingestion blocked ***")
+        for h in res["iuu"]["iuu_hits"]:
+            print(f"  ⚠ {h['vessel_name']} ({h['flag']}): {h['reason']} [{h['cmm']}]")
+
+    chartered = {t: c["reporting_country"] for t, c in res["charter_attribution"].items()
+                 if c["is_chartered"]}
+    if chartered:
+        print("\nCharter attribution (catch legally reassigned to chartering state):")
+        for trip, country in chartered.items():
+            print(f"  {trip}: → {country}")
+
+    hs = res["harvest_strategy"]
+    print(f"\nHarvest-strategy view: composition {hs['composition_share']}")
+    if hs.get("advisory"):
+        print(f"  advisory: {hs['advisory']}")
+
     print("\nEEZ zones per trip:")
     for trip, zone in res["eez_zones"].items():
         print(f"  {trip}: {zone}")

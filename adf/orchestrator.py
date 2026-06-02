@@ -60,14 +60,24 @@ class ADFOrchestrator:
         std_rows, species_seen = self._synthesize(rows, proposal["mapping"])
         self.log(f"standardised {len(std_rows)} rows to the catch_effort schema")
 
+        # IUU gate (Agent 5): scan vessel identities BEFORE anything else
+        ids = sorted({r["vessel_id"] for r in std_rows if r["vessel_id"]})
+        iuu = self.mcp.call("check_iuu_status", identifiers=ids)
+        if not iuu["is_safe_to_ingest"]:
+            for h in iuu["iuu_hits"]:
+                self.log(f"!! IUU MATCH: {h['vessel_name']} — {h['reason']} ({h['cmm']})")
+
         self.state = "ENRICHMENT"
         species = self.mcp.call("resolve_fao_species_code",
                                 raw_species_string=sorted(species_seen))
         protected = [s["input"] for s in species if s["protected"]]
         self.log("species resolved: " +
                  ", ".join(f"{s['input']}→{s['fao_code']}" for s in species))
-        zones, vessels = self._enrich(std_rows)
+        zones, vessels, charter = self._enrich(std_rows)
         self.log(f"EEZ zones touched: {sorted(set(zones.values()))}")
+        chartered = {t: c["reporting_country"] for t, c in charter.items() if c["is_chartered"]}
+        if chartered:
+            self.log(f"charter attribution (catch reassigned): {chartered}")
         unregistered = [v for v, p in vessels.items() if not p.get("found")]
         if unregistered:
             self.log(f"unregistered vessels: {unregistered}")
@@ -79,14 +89,24 @@ class ADFOrchestrator:
         self.log(f"validation: {status['n_error']} errors, "
                  f"{status['n_warning']} warnings across {status['flagged_rows']} rows")
 
+        harvest = self.mcp.call("harvest_strategy_check", rows=std_rows)
+        if harvest.get("advisory"):
+            self.log(f"harvest-strategy advisory: {harvest['advisory']}")
+
         self.state = "DECISION"
-        decision = "READY_TO_FORWARD" if status["can_forward"] else "HELD_FOR_REVIEW"
+        if not iuu["is_safe_to_ingest"]:
+            decision = "BLOCKED_IUU"
+        elif status["can_forward"]:
+            decision = "READY_TO_FORWARD"
+        else:
+            decision = "HELD_FOR_REVIEW"
         self.log(f"decision: {decision}")
         return {
             "content_type": ctype, "mapping": proposal,
             "standardised_rows": std_rows, "species": species,
             "protected_species": protected, "eez_zones": zones,
-            "vessel_profiles": vessels, "findings": findings,
+            "vessel_profiles": vessels, "charter_attribution": charter,
+            "iuu": iuu, "harvest_strategy": harvest, "findings": findings,
             "status": status, "decision": decision,
             "friendly_flags": [self._friendly(f) for f in findings]}
 
@@ -119,7 +139,7 @@ class ADFOrchestrator:
         return out, species_seen
 
     def _enrich(self, std_rows):
-        zones, vessels = {}, {}
+        zones, vessels, charter = {}, {}, {}
         for r in std_rows:
             try:
                 lat, lon = float(r["latitude"]), float(r["longitude"])
@@ -131,7 +151,12 @@ class ADFOrchestrator:
             vid = r["vessel_id"]
             if vid and vid not in vessels:
                 vessels[vid] = self.mcp.call("query_local_vessel_registry", vessel_sign=vid)
-        return zones, vessels
+            # Charter reconciliation (Agent 6): who owns this catch on this date?
+            c = self.mcp.call("lookup_vessel_charter_status",
+                              wcpfc_vid=vid, activity_date=r.get("set_date", ""))
+            charter[r["trip_id"]] = c
+            r["flag"] = c.get("reporting_country") or r.get("flag")
+        return zones, vessels, charter
 
     def _friendly(self, finding):
         return {"record": finding["record_id"], "severity": finding["severity"],

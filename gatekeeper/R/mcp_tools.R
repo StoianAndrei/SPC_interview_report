@@ -88,6 +88,62 @@ mcp_validate_eez <- function(latitude, longitude) {
        zone_code = iso, is_land = on_land)
 }
 
+# IUU blacklist: match any identifier against the offline WCPFC IUU list
+load_iuu <- function(dir = GK_PATHS$reference) {
+  p <- file.path(dir, "iuu_vessel_list.csv")
+  if (!file.exists(p)) return(tibble())
+  readr::read_csv(p, show_col_types = FALSE, progress = FALSE)
+}
+mcp_check_iuu <- function(identifiers, iuu = load_iuu()) {
+  if (!nrow(iuu)) return(list(is_safe_to_ingest = TRUE, iuu_hits = list()))
+  keys <- .fold(identifiers); keys <- keys[keys != ""]
+  hits <- list()
+  for (i in seq_len(nrow(iuu))) {
+    cand <- setdiff(.fold(c(iuu$vessel_id[i], iuu$call_sign[i], iuu$imo[i],
+                            iuu$vessel_name[i])), "")
+    if (length(intersect(keys, cand)))
+      hits[[length(hits) + 1]] <- list(vessel_name = iuu$vessel_name[i],
+        flag = iuu$flag[i], reason = iuu$reason[i], cmm = iuu$cmm[i])
+  }
+  list(is_safe_to_ingest = length(hits) == 0, iuu_hits = hits)
+}
+
+# Charter reconciliation: who owns the catch on this date (chartering vs flag)?
+load_charters <- function(dir = GK_PATHS$reference) {
+  p <- file.path(dir, "vessel_charters.csv")
+  if (!file.exists(p)) return(tibble())
+  readr::read_csv(p, show_col_types = FALSE, progress = FALSE)
+}
+mcp_charter_status <- function(wcpfc_vid, activity_date, ch = load_charters()) {
+  d <- as.character(activity_date)
+  if (nrow(ch)) {
+    m <- ch[.fold(ch$wcpfc_vid) == .fold(wcpfc_vid) &
+            ch$start_date <= d & d <= ch$end_date, ]
+    if (nrow(m))
+      return(list(is_chartered = TRUE, reporting_country = m$charter_state[1],
+                  flag_state = m$flag_state[1],
+                  notes = paste0("catch attributed to chartering state ",
+                                 m$charter_state[1])))
+  }
+  flag <- REF$registry$flag[match(wcpfc_vid, REF$registry$vessel_id)]
+  list(is_chartered = FALSE, reporting_country = flag, flag_state = flag,
+       notes = "standard flag-state attribution")
+}
+
+# Harvest-strategy view: catch composition + mixed-fishery / LRP advisory
+mcp_harvest_insight <- function(rows) {
+  df <- tibble::as_tibble(rows)
+  s <- function(c) sum(to_num(df[[c]]), na.rm = TRUE)
+  tot <- c(SKJ = s("catch_skj_kg"), YFT = s("catch_yft_kg"),
+           BET = s("catch_bet_kg"), ALB = s("catch_alb_kg"))
+  grand <- max(1, sum(tot)); bet_share <- unname(tot["BET"] / grand)
+  list(composition_share = as.list(round(tot / grand, 3)),
+       bigeye_share = round(bet_share, 3),
+       advisory = if (bet_share > 0.15)
+         sprintf("Elevated bigeye share (%.0f%%) in the mixed fishery — watch the 20%% LRP breach limit.",
+                 100 * bet_share) else NULL)
+}
+
 # vessel id / call sign -> structural profile from the offline registry
 mcp_query_vessel <- function(vessel_sign) {
   r <- REF$registry[match(vessel_sign, REF$registry$vessel_id), ]

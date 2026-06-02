@@ -34,6 +34,9 @@ class PythonReferenceBackend:
         "resolve_port_code":      lambda a: T.resolve_port(a["raw_port_string"]),
         "validate_spatial_eez":   lambda a: T.validate_spatial_eez(a["latitude"], a["longitude"]),
         "query_local_vessel_registry": lambda a: T.query_vessel(a["vessel_sign"]),
+        "check_iuu_status":       lambda a: T.check_iuu_status(a["identifiers"]),
+        "lookup_vessel_charter_status": lambda a: T.charter_status(a["wcpfc_vid"], a["activity_date"]),
+        "harvest_strategy_check": lambda a: T.harvest_strategy_insight(a["rows"]),
         "execute_r_validation":   lambda a: {
             "findings": T.validate_catch_effort(a["rows"]),
             "status": T.submission_status(T.validate_catch_effort(a["rows"]), len(a["rows"]))},
@@ -71,7 +74,8 @@ class MCPClient:
 
     def call(self, tool, **args):
         # the ADF only lets the LLM invoke DECLARED tools (sandbox boundary)
-        known = self.declared | {"map_columns"}
+        known = self.declared | {"map_columns", "check_iuu_status",
+                                 "lookup_vessel_charter_status", "harvest_strategy_check"}
         if tool not in known:
             raise PermissionError(f"tool '{tool}' is not in the MCP manifest")
         return self.backend.call(tool, args)

@@ -44,6 +44,8 @@ SPECIES_SYN = {fold(r["name"]): r["fao_code"]
                for r in _read(os.path.join(REF, "species_synonyms.csv"))}
 FIELD_SYN = {fold(r["synonym"]): r["canonical"]
              for r in _read(os.path.join(REF, "field_synonyms.csv"))}
+IUU = _read(os.path.join(REF, "iuu_vessel_list.csv"))
+CHARTERS = _read(os.path.join(REF, "vessel_charters.csv"))
 _ports = _read(os.path.join(REF, "port_codes.csv"))
 PORT_SYN = {}
 for r in _ports:
@@ -125,6 +127,56 @@ def validate_spatial_eez(latitude, longitude):
             zone, code = b["country"], b["code"]; break
     return {"latitude": latitude, "longitude": longitude,
             "computed_zone": zone, "zone_code": code, "is_land": on_land}
+
+
+def check_iuu_status(identifiers):
+    """Match any vessel identifier (id / call sign / IMO / name) against the
+    offline WCPFC IUU vessel list. A hit must block ingestion."""
+    keys = {fold(x) for x in identifiers if str(x).strip()}
+    hits = []
+    for r in IUU:
+        cand = {fold(r["vessel_id"]), fold(r["call_sign"]), fold(r["imo"]),
+                fold(r["vessel_name"])} - {""}
+        if keys & cand:
+            hits.append({"matched_on": list(keys & cand),
+                         "vessel_name": r["vessel_name"], "flag": r["flag"],
+                         "reason": r["reason"], "cmm": r["cmm"]})
+    return {"is_safe_to_ingest": len(hits) == 0, "iuu_hits": hits}
+
+
+def charter_status(wcpfc_vid, activity_date):
+    """Who legally owns the catch on this date? Chartering state if an active
+    charter covers the date, else the flag state."""
+    d = str(activity_date)
+    for c in CHARTERS:
+        if fold(c["wcpfc_vid"]) == fold(wcpfc_vid) and c["start_date"] <= d <= c["end_date"]:
+            return {"is_chartered": True, "reporting_country": c["charter_state"],
+                    "flag_state": c["flag_state"],
+                    "notes": f"catch attributed to chartering state {c['charter_state']} "
+                             f"(flag {c['flag_state']})"}
+    # fall back to flag state from the registry
+    flag = REGISTRY.get(wcpfc_vid, {}).get("flag")
+    return {"is_chartered": False, "reporting_country": flag, "flag_state": flag,
+            "notes": "standard flag-state attribution"}
+
+
+def harvest_strategy_insight(rows):
+    """Lightweight harvest-strategy view: catch composition + a mixed-fishery /
+    juvenile-bigeye flag aligned with the WCPFC LRP (<=20% breach) posture."""
+    tot = {"SKJ": 0.0, "YFT": 0.0, "BET": 0.0, "ALB": 0.0}
+    for r in rows:
+        for sp, col in (("SKJ", "catch_skj_kg"), ("YFT", "catch_yft_kg"),
+                        ("BET", "catch_bet_kg"), ("ALB", "catch_alb_kg")):
+            tot[sp] += _num(r.get(col)) or 0
+    grand = sum(tot.values()) or 1
+    bet_share = tot["BET"] / grand
+    note = None
+    if bet_share > 0.15:
+        note = (f"Elevated bigeye share ({bet_share*100:.0f}%) in the mixed "
+                "skipjack/bigeye/yellowfin fishery — watch against candidate "
+                "Target Reference Points and the 20% LRP breach limit.")
+    return {"composition_share": {k: round(v / grand, 3) for k, v in tot.items()},
+            "bigeye_share": round(bet_share, 3), "advisory": note}
 
 
 def query_vessel(vessel_sign):

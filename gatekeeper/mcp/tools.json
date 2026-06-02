@@ -66,6 +66,39 @@
       }
     },
     {
+      "name": "check_iuu_status",
+      "r_function": "mcp_check_iuu",
+      "description": "Matches vessel identifiers (id / call sign / IMO / name) against the offline WCPFC IUU vessel list. A hit blocks ingestion.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "identifiers": { "type": "array", "items": { "type": "string" } } },
+        "required": ["identifiers"]
+      }
+    },
+    {
+      "name": "lookup_vessel_charter_status",
+      "r_function": "mcp_charter_status",
+      "description": "Checks if a vessel was under an active charter on a date; attributes catch to the chartering state vs the flag state.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "wcpfc_vid": { "type": "string" },
+          "activity_date": { "type": "string", "format": "date" }
+        },
+        "required": ["wcpfc_vid", "activity_date"]
+      }
+    },
+    {
+      "name": "harvest_strategy_check",
+      "r_function": "mcp_harvest_insight",
+      "description": "Catch composition + mixed-fishery / 20% LRP advisory aligned with WCPFC harvest strategies.",
+      "input_schema": {
+        "type": "object",
+        "properties": { "rows": { "type": "array" } },
+        "required": ["rows"]
+      }
+    },
+    {
       "name": "execute_r_validation",
       "r_function": "validate_submission",
       "description": "Runs the full three-tier validation engine on a standardised table and returns the findings + a forward/hold decision.",
